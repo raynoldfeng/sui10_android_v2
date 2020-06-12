@@ -12,4 +12,19 @@
     <string name="tab_mine_text">我</string>
     <string name="click_again_and_exit">再次点击退出应用</string>
 
+    <!-- 隐私协议-->
+    <string name="login_policy">登录即视为同意用户服务协议和隐私政策</string>
+    <string name="i_disagree">拒绝</string>
+    <string name="i_agree">同意</string>
+    <string name="i_know">我知道了</string>
+    <string name="personal_info_protection_guidelines">个人信息保护指引</string>
+    <string name="privacy_digest">《随拾隐私政策》</string>
+    <string name="service_digest">《服务协议》</string>
+    <string name="protection_guidelines_content">欢迎您使用随拾！\n
+我们非常重视您的个人信息安全，为了更好的保障您的个人权益，我们将通过《服务协议》和《随拾隐私政策》帮助您了解我们收集和处理个人信息的情况，您所有享有的权利以及我们为保护好您的个人信息所采用的安全技术措施，请您认真阅读并充分理解有关条款。\n
+1.为帮助您完成用户注册和产品使用，我们会收集您注册和使用服务时填写的相关用户信息。\n
+2.为实现产品功能正常运行，我们会根据您使用具体产品功能的需要，向您申请相关设备权限并收集信息，您可以自主选择是否授权，您可以在所使用设备的系统设置界面查看并管理权限状态。\n
+3. 未经您许可，我们不会与第三方共享或对外提供您的个人信息；您也可以对您的个人信息进行访问、更正和删除。</string>
+
+
 </resources>

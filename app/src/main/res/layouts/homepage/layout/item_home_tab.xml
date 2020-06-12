@@ -20,11 +20,11 @@
         android:layout_below="@id/android:icon"
         android:textSize="13sp"
         android:layout_marginTop="-7dp"
-        android:textColor="@color/home_bottom_text_selector"/>
+        android:textColor="@color/bottom_tab_color_selector"/>
 
     <ImageView
         android:id="@+id/iv_notify"
-        android:visibility="visible"
+        android:visibility="gone"
         android:layout_toEndOf="@id/android:icon"
         android:layout_toRightOf="@id/android:icon"
         android:layout_marginTop="@dimen/dp_3"

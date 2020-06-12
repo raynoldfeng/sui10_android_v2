@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/splash_anim_lav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="anim/lottie_splash.json"
+        app:lottie_loop="false"/>
+
+    <RelativeLayout
+        android:id="@+id/privacy_policy_summary_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_transparency_70_percent"
+        android:visibility="visible"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_280"
+            android:layout_height="@dimen/dp_320"
+            android:background="@drawable/bg_privacy_guid">
+            <TextView
+                android:id="@+id/guidelines_title"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginTop ="@dimen/dp_20"
+                android:gravity = "center"
+                android:textStyle = "bold"
+                android:textSize="@dimen/sp_18"
+                android:textColor="@color/black"
+                android:text="@string/personal_info_protection_guidelines">
+            </TextView>
+
+            <TextView
+                android:id="@+id/policy_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/guidelines_title"
+                android:layout_above="@+id/btn_view"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:scrollbars="vertical"
+                android:text="@string/protection_guidelines_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/black_transparency_70_percent">
+            </TextView>
+
+
+            <LinearLayout
+                android:id="@+id/btn_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/cacel_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:background="@color/black_transparency_10_percent"
+                    android:textColor="@color/black_transparency_50_percent"
+                    android:text="@string/i_disagree">
+                </Button>
+                <Button
+                    android:id="@+id/confirm_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:background="@drawable/bg_common_btn"
+                    android:textColor="@color/white"
+                    android:text="@string/i_agree">
+                </Button>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="common_bg">#FF008577</color>
+    <color name="common_bg">#FFFFFFFF</color>
 
     <color name="transparent">#00000000</color>
     <color name="white">#FFFFFFFF</color>
