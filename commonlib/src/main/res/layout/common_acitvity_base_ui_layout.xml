@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ui_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/ui_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ViewStub
+            android:id="@+id/ui_topbar_viewstub"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/common_topBarHeight"
+            android:layout="@layout/common_toolbar"/>
+        <FrameLayout
+            android:id="@+id/ui_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </FrameLayout>
+    </RelativeLayout>
+
+    <!-- 侧边栏 -->
+    <FrameLayout
+        android:id="@+id/ui_sidemenu_container"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:layout_gravity="start">
+    </FrameLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

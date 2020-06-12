@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="common_topBarHeight" format="dimension"/>
+    <attr name="common_topBarBackground" format="reference"/>
+    <attr name="common_statusBarBackground" format="reference"/>
+    <attr name="common_topBarLeftDrawable" format="reference"/>
+    <attr name="common_topBarOverlay" format="boolean"/>
+    <attr name="common_topBar" format="boolean"/>
+    <attr name="common_statusBarImmersive" format="boolean"/>
+    <attr name="common_selectableItemBackground" format="reference"/>
+</resources>

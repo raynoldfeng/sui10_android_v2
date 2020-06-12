@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="SpUsage,HardcodedText,contentDescription,RtlHardcoded,RtlHardcoded,PxUsage"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--fake状态栏，沉浸状态栏模式下使整个布局下移，不使布局与状态栏重叠-->
+    <View
+        android:id="@+id/common_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <RelativeLayout
+        android:id="@+id/commom_title_bar"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/common_status_bar"
+        android:background="?attr/common_topBarBackground"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/common_topBarHeight">
+
+        <ImageView
+            android:id="@+id/top_left_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="?attr/common_selectableItemBackground"
+            android:duplicateParentState="true"
+            android:paddingLeft="@dimen/dp_16"
+            android:src="?attr/common_topBarLeftDrawable" />
+
+        <TextView
+            android:id="@+id/top_left_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/top_left_image"
+            android:layout_toLeftOf="@+id/top_right_layout"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:layout_marginRight="@dimen/dp_6"
+            android:maxLines="1"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            />
+        <RelativeLayout
+            android:id="@+id/top_left_custom"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/top_left_image"
+            android:layout_toLeftOf="@+id/top_right_layout"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:layout_marginRight="@dimen/dp_6"
+            android:visibility="gone"
+            />
+        <LinearLayout
+            android:id="@+id/top_center_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="?attr/common_topBarHeight"
+                android:layout_marginRight="?attr/common_topBarHeight"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/top_right_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/common_action_btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dp_24"
+                tools:visibility="visible"
+                android:visibility="gone" />
+            <ImageView
+                android:id="@+id/common_action_btn2"
+                tools:visibility="visible"
+                android:visibility="gone"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+            <FrameLayout
+                android:id="@+id/commom_action_more"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:layout_marginRight="@dimen/dp_16">
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</merge>

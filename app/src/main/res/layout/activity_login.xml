@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ln_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_140">
+
+        <LinearLayout
+            android:id="@+id/ln_area_code"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_27"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_btn_area"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_flag"
+                android:layout_width="@dimen/dp_12"
+                android:layout_height="@dimen/dp_12"
+                android:src="@drawable/flag_086"/>
+
+            <TextView
+                android:id="@+id/tv_area_code"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_27"
+                android:layout_marginStart="@dimen/dp_4"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="86"
+                android:textColor="@color/common_text_color_dark_grey"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_27"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_toLeftOf="@+id/iv_clear_phone_text"
+            android:layout_toStartOf="@+id/iv_clear_phone_text"
+            android:layout_toEndOf="@id/ln_area_code"
+            android:layout_toRightOf="@id/ln_area_code"
+            android:background="@null"
+            android:gravity="start|center_vertical"
+            android:textColor="@color/common_text_color_dark_grey"
+            android:hint="@string/input_mobile_phone"
+            android:textColorHint="@color/common_text_color_light_grey"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="20"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/iv_clear_phone_text"
+            android:layout_width="@dimen/dp_34"
+            android:layout_height="@dimen/dp_34"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_8"
+            android:src="@drawable/ic_clear_text"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/et_mobile"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_toEndOf="@id/ln_area_code"
+            android:layout_toRightOf="@id/ln_area_code"
+            android:background="@color/common_bg_divider" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40">
+
+        <ToggleButton
+            android:id="@+id/btn_password_lock"
+            android:layout_width="@dimen/dp_28"
+            android:layout_height="@dimen/dp_27"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_11"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:background="@null"
+            android:button="@drawable/ic_psw_lock"
+            android:clickable="false"
+            android:gravity="center"
+            android:textOff=""
+            android:textOn="" />
+
+        <ImageView
+            android:id="@+id/iv_psw_hide"
+            android:layout_width="@dimen/dp_27"
+            android:layout_height="@dimen/dp_27"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_4"
+            android:scaleType="center"
+            android:src="@drawable/ic_psw_hide" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_27"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_23"
+            android:layout_marginLeft="@dimen/dp_23"
+            android:layout_toStartOf="@id/iv_psw_hide"
+            android:layout_toLeftOf="@id/iv_psw_hide"
+            android:layout_toEndOf="@id/btn_password_lock"
+            android:layout_toRightOf="@id/btn_password_lock"
+            android:background="@null"
+            android:gravity="start|center_vertical"
+            android:hint="@string/input_password"
+            android:textColor="@color/common_text_color_dark_grey"
+            android:textColorHint="@color/common_text_color_light_grey"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/iv_clear_psw_text"
+            android:layout_width="@dimen/dp_34"
+            android:layout_height="@dimen/dp_34"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_35"
+            android:layout_marginRight="@dimen/dp_35"
+            android:padding="@dimen/dp_8"
+            android:src="@drawable/ic_clear_text"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/et_password"
+            android:layout_marginStart="@dimen/dp_23"
+            android:layout_marginLeft="@dimen/dp_23"
+            android:layout_toEndOf="@id/btn_password_lock"
+            android:layout_toRightOf="@id/btn_password_lock"
+            android:background="@color/common_bg_divider" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_24">
+
+        <TextView
+            android:id="@+id/btn_register"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="start"
+            android:layout_weight="37"
+            android:gravity="center"
+            android:text="@string/register"
+            android:background="@drawable/bg_common_btn"
+            android:textAllCaps="false"
+            android:textColor="@color/common_text_color"/>
+
+        <View
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="10" />
+
+        <TextView
+            android:id="@+id/btn_login"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="end"
+            android:layout_weight="37"
+            android:gravity="center"
+            android:text="@string/login"
+            android:textAllCaps="false"
+            android:textColor="@color/common_btn_bg"
+            android:background="@drawable/bg_btn_white_with_stroke"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/btn_forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginEnd="@dimen/dp_44"
+        android:layout_marginRight="@dimen/dp_44"
+        android:layout_marginStart="@dimen/dp_44"
+        android:layout_marginLeft="@dimen/dp_44"
+        android:paddingBottom="@dimen/dp_8"
+        android:paddingRight="0dp"
+        android:paddingEnd="0dp"
+        android:paddingStart="@dimen/dp_8"
+        android:paddingLeft="@dimen/dp_8"
+        android:paddingTop="@dimen/dp_16"
+        android:text="@string/forget_password"
+        android:textColor="@color/common_text_color_light_grey"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_38"
+        android:gravity="center_horizontal"
+        android:text="@string/can_login_by"
+        android:textColor="@color/common_text_color_light_grey"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp_26">
+
+        <Button
+            android:id="@+id/btn_one"
+            style="@style/AccountButton"
+            android:layout_width="@dimen/dp_47"
+            android:layout_height="@dimen/dp_47"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_login_qq" />
+
+        <Button
+            android:id="@+id/btn_two"
+            style="@style/AccountButton"
+            android:layout_width="@dimen/dp_47"
+            android:layout_height="@dimen/dp_47"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp_32"
+            android:layout_marginLeft="@dimen/dp_32"
+            android:background="@drawable/ic_login_wechat" />
+    </LinearLayout>
+
+</LinearLayout>

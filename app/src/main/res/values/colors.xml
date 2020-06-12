@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="common_bg_divider">#FFF5F5F5</color>
+    <color name="common_bg_dark">#FFF5F5F5</color>
+    <color name="common_text_color">#FFFFFFFF</color>
+    <color name="common_text_color_dark_grey">#FF1E1E1E</color>
+    <color name="common_text_color_grey">#5a5a5a</color>
+    <color name="common_text_color_light_grey">#FFB4B4B4</color>
+    <color name="common_btn_enable">#FF808069</color>
+    <color name="common_btn_bg">#FF008000</color>
+    <color name="common_btn_pressed">#FF006400</color>
+    <color name="colorPrimary">#FF008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="home_bottom_text_selector">#FF008000</color>
+
+    <color name="color_FF808069">#FF808069</color>
+    <color name="color_FFE88565">#FFE88565</color>
+</resources>

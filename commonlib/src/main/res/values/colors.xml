@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="common_bg">#FF008577</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_transparency_95_percent">#F3FFFFFF</color>
+    <color name="white_transparency_90_percent">#E6FFFFFF</color>
+    <color name="white_transparency_80_percent">#bbFFFFFF</color>
+    <color name="white_transparency_70_percent">#b3FFFFFF</color>
+    <color name="white_transparency_60_percent">#99FFFFFF</color>
+    <color name="white_transparency_50_percent">#77FFFFFF</color>
+    <color name="white_transparency_40_percent">#66FFFFFF</color>
+    <color name="white_transparency_30_percent">#4cFFFFFF</color>
+    <color name="white_transparency_20_percent">#33FFFFFF</color>
+    <color name="white_transparency_15_percent">#26FFFFFF</color>
+    <color name="white_transparency_10_percent">#1AFFFFFF</color>
+    <color name="white_transparency_5_percent">#0DFFFFFF</color>
+
+    <color name="black">#FF000000</color>
+    <color name="black_transparency_5_percent">#0D000000</color>
+    <color name="black_transparency_10_percent">#1A000000</color>
+    <color name="black_transparency_15_percent">#26000000</color>
+    <color name="black_transparency_20_percent">#33000000</color>
+    <color name="black_transparency_25_percent">#40000000</color>
+    <color name="black_transparency_30_percent">#4c000000</color>
+    <color name="black_transparency_40_percent">#66000000</color>
+    <color name="black_transparency_45_percent">#72000000</color>
+    <color name="black_transparency_50_percent">#80000000</color>
+    <color name="black_transparency_60_percent">#99000000</color>
+    <color name="black_transparency_70_percent">#b3000000</color>
+    <color name="black_transparency_80_percent">#cc000000</color>
+    <color name="black_transparency_85_percent">#d8000000</color>
+    <color name="black_transparency_90_percent">#e6000000</color>
+
+
+    <color name="color_AD000000">#AD000000</color>
+    <color name="color_80000000">#80000000</color>
+    <color name="color_FF384257">#FF384257</color>
+    <color name="color_FF242B38">#FF242B38</color>
+    <color name="color_FF525866">#FF525866</color>
+    <color name="color_FF343E52">#FF343E52</color>
+    <color name="color_FF2A3242">#FF2A3242</color>
+    <color name="color_FF47587A">#FF47587A</color>
+    <color name="color_FF232932">#FF232932</color>
+</resources>

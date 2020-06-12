@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 基本主题 -->
+    <style name="ComicBaseTheme" parent="Theme.AppCompat.Light"/>
+
+    <!-- Base application theme. -->
+    <style name="Base.ComicAppTheme" parent="ComicBaseTheme">
+        <!-- Customize your theme here. -->
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:buttonStyle">?android:attr/borderlessButtonStyle</item>
+        <!--默认背景色-->
+        <item name="android:windowBackground">@color/common_bg</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowActionBarOverlay">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="common_topBar">false</item>
+        <item name="common_topBarOverlay">false</item>
+        <item name="common_statusBarImmersive">true</item>
+        <item name="common_statusBarBackground">@color/transparent</item>
+        <item name="common_topBarBackground">@color/transparent</item>
+        <item name="common_topBarLeftDrawable">@drawable/ic_common_back</item>
+        <item name="common_topBarHeight">@dimen/common_title_bar_height</item>
+        <item name="common_selectableItemBackground">@drawable/common_clickable_selector</item>
+        <item name="android:windowAnimationStyle">@style/Activity_Slide_Animation</item>
+    </style>
+
+    <style name="ComicAppTheme" parent="Base.ComicAppTheme"/>
+
+    <style name="ComicAppTheme.BaseUI" parent="ComicAppTheme">
+        <item name="common_topBar">true</item>
+        <item name="common_topBarBackground">@color/common_bg</item>
+        <item name="common_statusBarBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="ComicAppTheme.BaseUI.NoTitle" parent="ComicAppTheme">
+        <item name="common_topBar">false</item>
+        <item name="common_topBarBackground">@color/transparent</item>
+        <item name="common_statusBarBackground">@color/transparent</item>
+    </style>
+
+    <style name="ComicAppTheme.BaseUI.Fullscreen" parent="ComicAppTheme.BaseUI.NoTitle">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="ComicAppTheme.BaseUI.NoTitle.Main" parent="ComicAppTheme.BaseUI.NoTitle">
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <style name="Activity_Slide_Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/common_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/common_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/common_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/common_right_in</item>
+    </style>
+
+    <style name="ComicThemeSplash" parent="ComicAppTheme.BaseUI.Fullscreen">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="InsAuthDialog" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustResize</item>
+        <item name="android:paddingLeft">@dimen/dp_20</item>
+        <item name="android:paddingRight">@dimen/dp_20</item>
+        <item name="android:paddingTop">@dimen/dp_10</item>
+        <item name="android:paddingBottom">@dimen/dp_15</item>
+    </style>
+</resources>

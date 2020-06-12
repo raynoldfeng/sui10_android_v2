@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.tabs.TabLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    app:tabIndicatorHeight="0dp"
+    app:tabGravity="fill"
+    app:tabMode="fixed">
+
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/tab_home_text"
+        android:icon="@drawable/home_tab_selector"
+        android:layout="@layout/item_home_tab"/>
+
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/tab_fun_text"
+        android:icon="@drawable/like_tab_selector"
+        android:layout="@layout/item_home_tab"/>
+
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/tab_mine_text"
+        android:icon="@drawable/me_tab_selector"
+        android:layout="@layout/item_home_tab"/>
+
+</com.google.android.material.tabs.TabLayout>
