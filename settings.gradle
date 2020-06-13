@@ -1,2 +1,2 @@
 include ':app', ':commonlib'
-rootProject.name='YoYo'
+rootProject.name='s10_android_v2'
