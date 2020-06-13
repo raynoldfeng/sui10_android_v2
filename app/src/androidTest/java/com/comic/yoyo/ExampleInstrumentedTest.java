@@ -1,4 +1,4 @@
-package com.comic.yoyo;
+package com.sui10.suishi;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.comic.yoyo", appContext.getPackageName());
+        assertEquals("com.sui10.suishi", appContext.getPackageName());
     }
 }

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- 基本主题 -->
-    <style name="ComicBaseTheme" parent="Theme.AppCompat.Light"/>
+    <style name="SuishiBaseTheme" parent="Theme.AppCompat.Light"/>
 
     <!-- Base application theme. -->
-    <style name="Base.ComicAppTheme" parent="ComicBaseTheme">
+    <style name="Base.SuishiAppTheme" parent="SuishiBaseTheme">
         <!-- Customize your theme here. -->
         <item name="android:windowEnableSplitTouch">false</item>
         <item name="android:splitMotionEvents">false</item>
@@ -28,27 +28,27 @@
         <item name="android:windowAnimationStyle">@style/Activity_Slide_Animation</item>
     </style>
 
-    <style name="ComicAppTheme" parent="Base.ComicAppTheme"/>
+    <style name="SuishiAppTheme" parent="Base.SuishiAppTheme"/>
 
-    <style name="ComicAppTheme.BaseUI" parent="ComicAppTheme">
+    <style name="SuishiAppTheme.BaseUI" parent="SuishiAppTheme">
         <item name="common_topBar">true</item>
         <item name="common_topBarBackground">@color/common_bg</item>
         <item name="common_statusBarBackground">@android:color/transparent</item>
     </style>
 
-    <style name="ComicAppTheme.BaseUI.NoTitle" parent="ComicAppTheme">
+    <style name="SuishiAppTheme.BaseUI.NoTitle" parent="SuishiAppTheme">
         <item name="common_topBar">false</item>
         <item name="common_topBarBackground">@color/transparent</item>
         <item name="common_statusBarBackground">@color/transparent</item>
     </style>
 
-    <style name="ComicAppTheme.BaseUI.Fullscreen" parent="ComicAppTheme.BaseUI.NoTitle">
+    <style name="SuishiAppTheme.BaseUI.Fullscreen" parent="SuishiAppTheme.BaseUI.NoTitle">
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
-    <style name="ComicAppTheme.BaseUI.NoTitle.Main" parent="ComicAppTheme.BaseUI.NoTitle">
+    <style name="SuishiAppTheme.BaseUI.NoTitle.Main" parent="SuishiAppTheme.BaseUI.NoTitle">
         <item name="android:windowIsTranslucent">false</item>
     </style>
 
@@ -59,7 +59,7 @@
         <item name="android:activityCloseExitAnimation">@anim/common_right_in</item>
     </style>
 
-    <style name="ComicThemeSplash" parent="ComicAppTheme.BaseUI.Fullscreen">
+    <style name="SuishiThemeSplash" parent="SuishiAppTheme.BaseUI.Fullscreen">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="windowActionBar">false</item>

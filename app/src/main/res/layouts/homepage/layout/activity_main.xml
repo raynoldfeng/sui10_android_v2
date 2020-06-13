@@ -5,19 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.sui10.suishi.base.ui.SuishiNoScrollViewPager
+        android:id="@+id/main_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false">
+    </com.sui10.suishi.base.ui.SuishiNoScrollViewPager>
 
-        <com.comic.yoyo.base.ui.ComicNoScrollViewPager
-            android:id="@+id/main_pager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clipChildren="false">
-        </com.comic.yoyo.base.ui.ComicNoScrollViewPager>
-
-        <include
-            android:id="@+id/bottom_tab"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_alignParentBottom="true"
-            layout="@layout/layout_home_tab"/>
+    <include
+         android:id="@+id/bottom_tab"
+         android:layout_width="match_parent"
+         android:layout_height="48dp"
+         android:layout_alignParentBottom="true"
+         layout="@layout/layout_home_tab"/>
 
 </RelativeLayout>

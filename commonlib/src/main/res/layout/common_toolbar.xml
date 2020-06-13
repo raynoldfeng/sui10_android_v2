@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.comic.commonlib.ui.view.widget.CustomToolBar
+<com.sui10.commonlib.ui.view.widget.CustomToolBar
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/tool_bar_layout"
     android:layout_width="match_parent"

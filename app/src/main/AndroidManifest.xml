@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.comic.yoyo">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sui10.suishi">
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -8,20 +9,22 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
-        android:name=".ComicApplication"
+        android:name=".SuishiApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_s10_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_s10_launcher_round"
         android:supportsRtl="true"
         android:networkSecurityConfig="@xml/network_security_config"
-        android:theme="@style/ComicAppTheme">
+        android:theme="@style/SuishiAppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="label">
 
         <activity
             android:name=".module.splash.SplashActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout|layoutDirection|uiMode"
             android:screenOrientation="portrait"
-            android:theme="@style/ComicThemeSplash">
+            android:theme="@style/SuishiThemeSplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,7 +35,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="comic" />
+                <data android:scheme="sui10" />
             </intent-filter>
         </activity>
 
@@ -40,19 +43,19 @@
             android:configChanges="orientation|screenSize"
             android:launchMode="singleTask"
             android:label="@string/login"
-            android:theme="@style/ComicAppTheme.BaseUI.NoTitle">
+            android:theme="@style/SuishiAppTheme.BaseUI.NoTitle">
         </activity>
 
         <activity android:name=".module.main.ui.MainActivity"
             android:configChanges="orientation|screenSize"
             android:launchMode="singleTask"
-            android:theme="@style/ComicAppTheme.BaseUI.NoTitle" >
+            android:theme="@style/SuishiAppTheme.BaseUI.NoTitle" >
         </activity>
 
 
         <activity android:name=".base.ui.FragContainerActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/ComicAppTheme.BaseUI.NoTitle"
+            android:theme="@style/SuishiAppTheme.BaseUI.NoTitle"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
 
         <!-- 微信登陆 -->

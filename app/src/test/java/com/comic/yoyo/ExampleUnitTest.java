@@ -1,4 +1,4 @@
-package com.comic.yoyo;
+package com.sui10.suishi;
 
 import org.junit.Test;
 

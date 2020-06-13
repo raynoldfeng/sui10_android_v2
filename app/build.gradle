@@ -1,15 +1,15 @@
 apply plugin: 'com.android.application'
 
 def projectRootDir = rootProject.getRootDir().getAbsolutePath()
-def KEYPATH = projectRootDir + '/keys/yoyo.keystore'
-def KEYPASSWORD = 'comicyoyo'
-def KEYALIS = 'yoyokey'
+def KEYPATH = projectRootDir + '/keys/suishi.keystore'
+def KEYALIAS = 'suishi'
+def KEYPASSWORD = 'undermine@2018'
 
 android {
     compileSdkVersion 28
     buildToolsVersion "28.0.2"
     defaultConfig {
-        applicationId "com.comic.yoyo"
+        applicationId "com.sui10.suishi"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 0
@@ -20,15 +20,17 @@ android {
     signingConfigs {
         release {
             storeFile file(KEYPATH)
-            keyAlias KEYALIS
+            keyAlias KEYALIAS
             storePassword KEYPASSWORD
             keyPassword KEYPASSWORD
-            v2SigningEnabled false
+            v2SigningEnabled true
         }
         debug {
-            storeFile file('/Users/xiaoxunzhi/Code/comic/keys/yoyo.keystore')
+            storeFile file(KEYPATH)
+            keyAlias KEYALIAS
             storePassword KEYPASSWORD
             keyPassword KEYPASSWORD
+            v2SigningEnabled true
         }
     }
 

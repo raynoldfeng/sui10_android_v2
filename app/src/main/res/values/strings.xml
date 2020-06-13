@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">YoYo</string>
+    <string name="app_name">随拾</string>
     <string name="wechat_not_installed">您还没有安装微信</string>
     <string name="login">登录</string>
     <string name="input_mobile_phone">请输入手机号码</string>
