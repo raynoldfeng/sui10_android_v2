@@ -6,8 +6,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.sui10.suishi.base.constant.HomeConstant;
-import com.sui10.suishi.module.main.ui.FollowFragment;
-import com.sui10.suishi.module.main.ui.HomeFragment;
+import com.sui10.suishi.module.main.ui.ProfessionalCourseFragment;
+import com.sui10.suishi.module.main.ui.OpenCourseFragment;
 import com.sui10.suishi.module.main.ui.MeFragment;
 
 public class MainViewPagerAdapter extends FragmentPagerAdapter {
@@ -23,10 +23,10 @@ public class MainViewPagerAdapter extends FragmentPagerAdapter {
         Fragment fragment=null;
         switch (position){
             case HomeConstant.PAGE_INDEX_HOME:
-                fragment = new HomeFragment();
+                fragment = new OpenCourseFragment();
                 break;
             case HomeConstant.PAGE_INDEX_FOLLOW:
-                fragment = new FollowFragment();
+                fragment = new ProfessionalCourseFragment();
                 break;
             case HomeConstant.PAGE_INDEX_MINE:
                 fragment = new MeFragment();

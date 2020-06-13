@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.sui10.suishi.module.login.ui.LoginActivity;
-import com.sui10.suishi.module.main.ui.HomeFragment;
+import com.sui10.suishi.module.main.ui.OpenCourseFragment;
 import com.sui10.suishi.module.main.ui.MainActivity;
 
 public class JumpManager {
@@ -20,10 +20,10 @@ public class JumpManager {
         context.startActivity(intent);
     }
 
-    public static void gotoHomeFragment(Context context, String title)
+    public static void gotoOpenCourseFragment(Context context, String title)
     {
         Bundle bundle = new Bundle();
-        bundle.putString(HomeFragment.KEY_FRAG_TITLE, title);
-        FragContainerActivity.start(context, HomeFragment.class, title, bundle);
+        bundle.putString(OpenCourseFragment.KEY_FRAG_TITLE, title);
+        FragContainerActivity.start(context, OpenCourseFragment.class, title, bundle);
     }
 }

@@ -1,23 +1,14 @@
 package com.sui10.suishi.module.main.ui;
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
-import com.sui10.commonlib.log.LogManager;
 import com.sui10.commonlib.ui.presenter.BasePresenter;
 import com.sui10.commonlib.ui.view.widget.BaseFragment;
 import com.sui10.suishi.R;
 
-public class HomeFragment extends BaseFragment {
+public class ProfessionalCourseFragment extends BaseFragment {
 
     @Override
     protected int getContentViewLayoutID() {
-        return R.layout.fragment_home;
+        return R.layout.fragment_professional_course;
     }
 
     @Override
@@ -32,7 +23,7 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     public void initViewsAndEvents() {
-        setTitle(R.string.tab_home_text);
+        setTitle(R.string.tab_professional_course_text);
     }
 
     @Override
@@ -43,17 +34,5 @@ public class HomeFragment extends BaseFragment {
     @Override
     protected void onNetworkDisConnected() {
 
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        LogManager.d("#####","onDestoryView");
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        LogManager.d("#####","onDestroy");
     }
 }

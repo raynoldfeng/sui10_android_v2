@@ -12,14 +12,14 @@
     <com.google.android.material.tabs.TabItem
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="@string/tab_home_text"
+        android:text="@string/tab_open_course_text"
         android:icon="@drawable/home_tab_selector"
         android:layout="@layout/item_home_tab"/>
 
     <com.google.android.material.tabs.TabItem
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="@string/tab_fun_text"
+        android:text="@string/tab_professional_course_text"
         android:icon="@drawable/like_tab_selector"
         android:layout="@layout/item_home_tab"/>
 

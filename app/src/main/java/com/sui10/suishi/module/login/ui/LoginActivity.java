@@ -49,13 +49,13 @@ public class LoginActivity extends BaseActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         initViewAndEvent();
-        //addFragment(R.id.ln_root,new HomeFragment(),HomeFragment.class.getCanonicalName(),true);
-       // addFragment(R.id.ln_root,new HomeFragment(),HomeFragment.class.getCanonicalName(),true);
+        //addFragment(R.id.ln_root,new OpenCourseFragment(),OpenCourseFragment.class.getCanonicalName(),true);
+       // addFragment(R.id.ln_root,new OpenCourseFragment(),OpenCourseFragment.class.getCanonicalName(),true);
     }
 
     @OnClick(R.id.btn_login)
     public void onLogin() {
-        //JumpManager.gotoHomeFragment(this,"home");
+        //JumpManager.gotoOpenCourseFragment(this,"home");
         JumpManager.gotoMainActivity(this);
         finish();
     }

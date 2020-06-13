@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">随拾</string>
+
+    <!-- 主页-->
+    <string name="tab_open_course_text">随拾学</string>
+    <string name="tab_professional_course_text">MBA</string>
+    <string name="tab_mine_text">我</string>
+    <string name="click_again_and_exit">再次点击退出应用</string>
+
+    <!-- 登录-->
     <string name="wechat_not_installed">您还没有安装微信</string>
     <string name="login">登录</string>
     <string name="input_mobile_phone">请输入手机号码</string>
@@ -7,10 +15,6 @@
     <string name="register">注册</string>
     <string name="forget_password"><u>忘记密码</u></string>
     <string name="can_login_by">您还可以用这些方式登录</string>
-    <string name="tab_home_text">首页</string>
-    <string name="tab_fun_text">关注</string>
-    <string name="tab_mine_text">我</string>
-    <string name="click_again_and_exit">再次点击退出应用</string>
 
     <!-- 隐私协议-->
     <string name="login_policy">登录即视为同意用户服务协议和隐私政策</string>
