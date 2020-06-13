@@ -19,7 +19,7 @@
         <item name="windowNoTitle">true</item>
         <item name="common_topBar">false</item>
         <item name="common_topBarOverlay">false</item>
-        <item name="common_statusBarImmersive">true</item>
+        <item name="common_statusBarImmersive">false</item>
         <item name="common_statusBarBackground">@color/transparent</item>
         <item name="common_topBarBackground">@color/transparent</item>
         <item name="common_topBarLeftDrawable">@drawable/ic_common_back</item>
@@ -31,21 +31,20 @@
     <style name="SuishiAppTheme" parent="Base.SuishiAppTheme"/>
 
     <style name="SuishiAppTheme.BaseUI" parent="SuishiAppTheme">
-        <item name="common_topBar">true</item>
-        <item name="common_topBarBackground">@color/common_bg</item>
+        <item name="common_topBar">false</item>
+        <item name="common_topBarBackground">@color/transparent</item>
         <item name="common_statusBarBackground">@android:color/transparent</item>
     </style>
 
     <style name="SuishiAppTheme.BaseUI.NoTitle" parent="SuishiAppTheme">
-        <item name="common_topBar">false</item>
-        <item name="common_topBarBackground">@color/transparent</item>
-        <item name="common_statusBarBackground">@color/transparent</item>
+        <item name="common_statusBarImmersive">true</item>
     </style>
 
     <style name="SuishiAppTheme.BaseUI.Fullscreen" parent="SuishiAppTheme.BaseUI.NoTitle">
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowContentOverlay">@null</item>
+        <item name="common_statusBarImmersive">true</item>
     </style>
 
     <style name="SuishiAppTheme.BaseUI.NoTitle.Main" parent="SuishiAppTheme.BaseUI.NoTitle">
@@ -69,19 +68,5 @@
         <item name="android:windowDisablePreview">true</item>
     </style>
 
-    <style name="InsAuthDialog" parent="@style/Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowFrame">@null</item>
-        <item name="android:windowContentOverlay">@null</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowFullscreen">false</item>
-        <item name="android:windowIsFloating">false</item>
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:backgroundDimEnabled">true</item>
-        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
-        <item name="android:windowSoftInputMode">stateUnspecified|adjustResize</item>
-        <item name="android:paddingLeft">@dimen/dp_20</item>
-        <item name="android:paddingRight">@dimen/dp_20</item>
-        <item name="android:paddingTop">@dimen/dp_10</item>
-        <item name="android:paddingBottom">@dimen/dp_15</item>
-    </style>
+  、
 </resources>
