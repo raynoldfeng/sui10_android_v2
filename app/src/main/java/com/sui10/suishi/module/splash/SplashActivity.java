@@ -1,8 +1,6 @@
 package com.sui10.suishi.module.splash;
 
-import android.Manifest;
 import android.animation.Animator;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -22,9 +20,8 @@ import com.sui10.commonlib.ui.presenter.BasePresenter;
 import com.sui10.commonlib.ui.view.widget.BaseActivity;
 import com.sui10.commonlib.utils.SharedPreferenceUtils;
 import com.sui10.suishi.R;
-import com.sui10.suishi.base.constant.SplashConstant;
-import com.sui10.suishi.base.ui.JumpManager;
-import com.sui10.suishi.module.login.ui.LoginActivity;
+import com.sui10.suishi.common.constant.SplashConstant;
+import com.sui10.suishi.common.ui.JumpManager;
 
 import butterknife.BindView;
 import butterknife.OnClick;

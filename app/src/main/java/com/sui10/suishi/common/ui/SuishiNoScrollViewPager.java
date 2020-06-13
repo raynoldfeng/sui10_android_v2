@@ -1,4 +1,4 @@
-package com.sui10.suishi.base.ui;
+package com.sui10.suishi.common.ui;
 
 import android.content.Context;
 import android.util.AttributeSet;

@@ -1,6 +1,6 @@
-package com.sui10.suishi.base.service;
+package com.sui10.suishi.common.net.service;
 
-import com.sui10.suishi.base.constant.LoginConstant;
+import com.sui10.suishi.common.constant.LoginConstant;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 
@@ -8,8 +8,6 @@ import io.reactivex.Observable;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
-import retrofit2.http.Header;
-import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
 public interface LoginService {

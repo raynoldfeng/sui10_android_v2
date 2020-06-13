@@ -1,22 +1,14 @@
-package com.sui10.suishi.module.main.ui;
-
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+package com.sui10.suishi.module.course.ui;
 
 import com.sui10.commonlib.ui.presenter.BasePresenter;
 import com.sui10.commonlib.ui.view.widget.BaseFragment;
 import com.sui10.suishi.R;
 
-public class MeFragment extends BaseFragment {
+public class ProfessionalCourseFragment extends BaseFragment {
 
     @Override
     protected int getContentViewLayoutID() {
-        return R.layout.fragment_me;
+        return R.layout.fragment_professional_course;
     }
 
     @Override
@@ -31,7 +23,7 @@ public class MeFragment extends BaseFragment {
 
     @Override
     public void initViewsAndEvents() {
-        setTitle(R.string.tab_mine_text);
+        setTitle(R.string.tab_professional_course_text);
     }
 
     @Override

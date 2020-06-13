@@ -1,16 +1,13 @@
-package com.sui10.suishi.module.usersystem.models;
+package com.sui10.suishi.common.net.models;
 
-
-import com.sui10.commonlib.network.manager.RetrofitManager;
-import com.sui10.suishi.base.service.AccountService;
-import com.sui10.suishi.base.service.LoginService;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
+import com.sui10.commonlib.network.manager.RetrofitManager;
+import com.sui10.suishi.common.net.service.LoginService;
 
 import io.reactivex.Observable;
 
-public class AccountModel {
-
+public class LoginModels {
     private static LoginService getLoginService(){
         return RetrofitManager.getInstance().get(LoginService.class);
     }

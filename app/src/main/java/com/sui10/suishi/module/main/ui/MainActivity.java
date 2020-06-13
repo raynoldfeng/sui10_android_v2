@@ -6,8 +6,8 @@ import android.widget.Toast;
 import com.sui10.commonlib.ui.presenter.BasePresenter;
 import com.sui10.commonlib.ui.view.widget.BaseActivity;
 import com.sui10.suishi.R;
-import com.sui10.suishi.base.constant.HomeConstant;
-import com.sui10.suishi.base.ui.SuishiNoScrollViewPager;
+import com.sui10.suishi.common.constant.HomeConstant;
+import com.sui10.suishi.common.ui.SuishiNoScrollViewPager;
 import com.sui10.suishi.module.main.adapter.MainViewPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 

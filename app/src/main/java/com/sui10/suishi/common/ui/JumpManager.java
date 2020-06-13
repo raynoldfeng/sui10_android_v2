@@ -1,11 +1,11 @@
-package com.sui10.suishi.base.ui;
+package com.sui10.suishi.common.ui;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
 import com.sui10.suishi.module.login.ui.LoginActivity;
-import com.sui10.suishi.module.main.ui.OpenCourseFragment;
+import com.sui10.suishi.module.course.ui.OpenCourseFragment;
 import com.sui10.suishi.module.main.ui.MainActivity;
 
 public class JumpManager {

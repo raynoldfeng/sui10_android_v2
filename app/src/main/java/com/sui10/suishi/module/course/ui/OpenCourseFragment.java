@@ -1,4 +1,4 @@
-package com.sui10.suishi.module.main.ui;
+package com.sui10.suishi.module.course.ui;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

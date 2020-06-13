@@ -5,10 +5,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.sui10.suishi.base.constant.HomeConstant;
-import com.sui10.suishi.module.main.ui.ProfessionalCourseFragment;
-import com.sui10.suishi.module.main.ui.OpenCourseFragment;
-import com.sui10.suishi.module.main.ui.MeFragment;
+import com.sui10.suishi.common.constant.HomeConstant;
+import com.sui10.suishi.module.course.ui.ProfessionalCourseFragment;
+import com.sui10.suishi.module.course.ui.OpenCourseFragment;
+import com.sui10.suishi.module.usersystem.ui.MeFragment;
 
 public class MainViewPagerAdapter extends FragmentPagerAdapter {
 

@@ -2,7 +2,6 @@ package com.sui10.suishi.module.login.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -14,13 +13,13 @@ import com.sui10.commonlib.thirdparty.login.ThirdLoginType;
 import com.sui10.commonlib.ui.presenter.BasePresenter;
 import com.sui10.commonlib.ui.view.widget.BaseActivity;
 import com.sui10.suishi.R;
-import com.sui10.suishi.base.ui.JumpManager;
+import com.sui10.suishi.common.net.models.LoginModels;
+import com.sui10.suishi.common.ui.JumpManager;
 import com.sui10.suishi.module.login.thirdparty.SuishiThirdLogin;
-import com.sui10.suishi.module.usersystem.models.AccountModel;
+import com.sui10.suishi.common.net.models.AccountModel;
 import com.google.gson.JsonObject;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
@@ -64,7 +63,7 @@ public class LoginActivity extends BaseActivity{
       }
 
     private void httpGetTest(){
-        AccountModel.loginBySmsCode("86","13676021121","9225")
+        LoginModels.loginBySmsCode("86","13676021121","9225")
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Consumer<JsonObject>() {
@@ -82,7 +81,7 @@ public class LoginActivity extends BaseActivity{
     }
 
     private void httpPostTest(){
-        AccountModel.loginBySmsCode("86","13676021121","9225")
+        LoginModels.loginBySmsCode("86","13676021121","9225")
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Consumer<JsonObject>() {

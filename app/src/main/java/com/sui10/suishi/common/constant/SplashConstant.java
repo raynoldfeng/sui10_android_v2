@@ -1,4 +1,4 @@
-package com.sui10.suishi.base.constant;
+package com.sui10.suishi.common.constant;
 
 public class SplashConstant {
 

@@ -1,4 +1,4 @@
-package com.sui10.suishi.base.config;
+package com.sui10.suishi.common.config;
 
 import com.sui10.commonlib.config.Config;
 
