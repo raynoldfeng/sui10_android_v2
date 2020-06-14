@@ -12,7 +12,8 @@
         android:textSize="@dimen/sp_28"
         android:layout_marginTop="@dimen/dp_50"
         android:layout_marginLeft="@dimen/dp_20"
-        android:text="@string/mba_course_title">
+        android:text="@string/mba_course_title"
+        android:textStyle="bold">
     </TextView>
 
     <TextView
