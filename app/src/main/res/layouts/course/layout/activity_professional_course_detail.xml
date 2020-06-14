@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_58"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:id="@+id/course_price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:textSize="@dimen/sp_22"
+            android:textColor="@color/color_FFE3A344">
+        </TextView>
+
+        <TextView
+            android:id="@+id/course_price_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/course_price_tv"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dp_1"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/color_FFE3A344"
+            android:text="@string/price_title">
+        </TextView>
+
+        <TextView
+            android:id="@+id/study_now_tv"
+            android:layout_width="@dimen/dp_220"
+            android:layout_height="@dimen/dp_44"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_16"
+            android:text="@string/study_now"
+            android:textColor="@color/color_FF805012"
+            android:background="@drawable/bg_common_btn">
+        </TextView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

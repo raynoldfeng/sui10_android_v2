@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">随拾</string>
 
     <!-- 主页-->
@@ -15,6 +15,14 @@
     <string name="register">注册</string>
     <string name="forget_password"><u>忘记密码</u></string>
     <string name="can_login_by">您还可以用这些方式登录</string>
+    <string name="please_login_first">您还未登录，请先登录</string>
+
+    <!-- 专业课-->
+    <string name="mba_course_title">MBA专业课</string>
+    <string name="mba_course_desc">培养能够胜任工商企业和经济管理部门高层管理工作需要的务实型、复合型和应用型高层次管理人才。</string>
+    <string name="learn_mba_course">了解随拾MBA专业课</string>
+    <string name="price_title">软妹币</string>
+    <string name="study_now">立即学习</string>
 
     <!-- 隐私协议-->
     <string name="login_policy">登录即视为同意用户服务协议和隐私政策</string>

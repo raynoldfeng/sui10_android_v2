@@ -41,22 +41,27 @@
 
         <activity android:name=".module.login.ui.LoginActivity"
             android:configChanges="orientation|screenSize"
-            android:launchMode="singleTask"
             android:label="@string/login"
-            android:theme="@style/SuishiAppTheme.BaseUI.NoTitle">
+            android:theme="@style/SuishiAppTheme.BaseUI.NoTitle.IMMersive">
         </activity>
 
         <activity android:name=".module.main.ui.MainActivity"
             android:configChanges="orientation|screenSize"
             android:launchMode="singleTask"
-            android:theme="@style/SuishiAppTheme.BaseUI" >
+            android:theme="@style/SuishiAppTheme.BaseUI.NoTitle" >
         </activity>
 
 
-        <activity android:name=".common.ui.FragContainerActivity"
+        <activity android:name=".common.ui.widget.FragContainerActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SuishiAppTheme.BaseUI.NoTitle"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
+        <activity android:name=".module.course.ui.ProfessionalCourseDetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/SuishiAppTheme.BaseUI"
+            android:label="">
+        </activity>
 
         <!-- 微信登陆 -->
         <activity

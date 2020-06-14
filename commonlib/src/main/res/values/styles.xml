@@ -31,16 +31,22 @@
     <style name="SuishiAppTheme" parent="Base.SuishiAppTheme"/>
 
     <style name="SuishiAppTheme.BaseUI" parent="SuishiAppTheme">
+        <item name="common_topBar">true</item>
+        <item name="common_topBarBackground">@color/common_bg</item>
+        <item name="common_statusBarBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="SuishiAppTheme.BaseUI.NoTitle" parent="SuishiAppTheme">
         <item name="common_topBar">false</item>
         <item name="common_topBarBackground">@color/transparent</item>
         <item name="common_statusBarBackground">@android:color/transparent</item>
     </style>
 
-    <style name="SuishiAppTheme.BaseUI.NoTitle" parent="SuishiAppTheme">
+    <style name="SuishiAppTheme.BaseUI.NoTitle.IMMersive" parent="SuishiAppTheme">
         <item name="common_statusBarImmersive">true</item>
     </style>
 
-    <style name="SuishiAppTheme.BaseUI.Fullscreen" parent="SuishiAppTheme.BaseUI.NoTitle">
+    <style name="SuishiAppTheme.BaseUI.Fullscreen" parent="SuishiAppTheme.BaseUI.NoTitle.IMMersive">
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowContentOverlay">@null</item>
