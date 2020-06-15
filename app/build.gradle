@@ -8,15 +8,6 @@ def KEYPASSWORD = 'undermine@2018'
 android {
     compileSdkVersion 28
     buildToolsVersion "28.0.2"
-    defaultConfig {
-        applicationId "com.sui10.suishi"
-        minSdkVersion 19
-        targetSdkVersion 28
-        versionCode 0
-        versionName version
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
-
     signingConfigs {
         release {
             storeFile file(KEYPATH)
@@ -32,6 +23,15 @@ android {
             keyPassword KEYPASSWORD
             v2SigningEnabled true
         }
+    }
+
+    defaultConfig {
+        applicationId "com.sui10.suishi"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 0
+        versionName version
+        signingConfig signingConfigs.release
     }
 
     buildTypes {
