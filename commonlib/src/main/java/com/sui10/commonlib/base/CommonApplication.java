@@ -1,11 +1,9 @@
 package com.sui10.commonlib.base;
 
 import android.app.Application;
-import android.content.ComponentCallbacks2;
 import android.content.Context;
 
-import com.sui10.commonlib.config.BuildHelper;
-import com.sui10.commonlib.utils.ProcessUtils;
+import com.sui10.commonlib.base.config.BuildHelper;
 
 public abstract class CommonApplication extends Application {
     private static Context mContext;

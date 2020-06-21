@@ -1,4 +1,4 @@
-package com.sui10.commonlib.ui.view.widget;
+package com.sui10.commonlib.ui.view.base;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -16,11 +16,9 @@ import com.sui10.commonlib.eventbus.EventBusManager;
 import com.sui10.commonlib.log.LogManager;
 import com.sui10.commonlib.ui.manager.RxLifeManager.RxFragmentLifeManager;
 import com.sui10.commonlib.ui.presenter.BasePresenter;
-import com.sui10.commonlib.ui.view.base.IBaseFragmentView;
 import com.sui10.commonlib.utils.CommonViewUtils;
-import com.sui10.commonlib.utils.ToolBarUtils;
+import com.sui10.commonlib.ui.utils.ToolBarUtils;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -161,7 +159,7 @@ public abstract class BaseFragment<T, P extends BasePresenter<T>> extends NetBas
     protected abstract int getContentViewLayoutID();
 
     private void initToolBarViewAndEvents(View view){
-        mCustomToolBar = view.findViewById(R.id.tool_bar_layout);
+        mCustomToolBar = view.findViewById(R.id.common_tool_bar);
         adjustStatusBar();
         if(mCustomToolBar != null){
             mCustomToolBar.getTopLeftImage().setOnClickListener(new View.OnClickListener() {

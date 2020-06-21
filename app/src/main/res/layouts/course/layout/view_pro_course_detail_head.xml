@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/view_channel_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/course_detail_content"
+        android:layout_alignTop="@+id/course_detail_content">
+        <ImageView
+            android:id="@+id/course_bg_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_transparency_30_percent"/>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/course_detail_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/course_cover_iv"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_124"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_87">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/course_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_22"
+            android:layout_toRightOf="@+id/course_cover_iv"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginRight="@dimen/dp_30"
+            android:layout_alignTop="@+id/course_cover_iv">
+        </TextView>
+
+        <TextView
+            android:id="@+id/learend_people_cnt_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/course_name_tv"
+            android:layout_below="@+id/course_name_tv"
+            android:layout_marginTop="@dimen/dp_12"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/white_transparency_70_percent">
+        </TextView>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

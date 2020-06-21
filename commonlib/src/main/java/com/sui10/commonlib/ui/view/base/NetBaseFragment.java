@@ -1,4 +1,4 @@
-package com.sui10.commonlib.ui.view.widget;
+package com.sui10.commonlib.ui.view.base;
 
 
 import android.content.Context;

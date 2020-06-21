@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.sui10.commonlib.ui.view.widget.CustomToolBar
+<com.sui10.commonlib.ui.view.base.CustomToolBar
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/tool_bar_layout"
+    android:id="@+id/common_tool_bar"
     android:layout_width="match_parent"
     android:layout_height="?attr/common_topBarHeight"
     android:background="?attr/common_topBarBackground" />

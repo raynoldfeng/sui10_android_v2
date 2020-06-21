@@ -1,16 +1,12 @@
-package com.sui10.commonlib.ui.view.widget;
+package com.sui10.commonlib.ui.view.base;
 
-import android.annotation.TargetApi;
-import android.content.Context;
 import android.content.res.TypedArray;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewParent;
 import android.view.ViewStub;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
@@ -27,16 +23,15 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.sui10.commonlib.R;
-import com.sui10.commonlib.config.BuildHelper;
+import com.sui10.commonlib.base.config.BuildHelper;
 import com.sui10.commonlib.log.LogManager;
 import com.sui10.commonlib.ui.manager.BaseViewManager;
 import com.sui10.commonlib.ui.manager.RxLifeManager.RxActivityLifeManager;
 import com.sui10.commonlib.ui.presenter.BasePresenter;
 import com.sui10.commonlib.ui.utils.StatusBarUtils;
-import com.sui10.commonlib.ui.view.base.IBaseActivityView;
 import com.sui10.commonlib.utils.CommonViewUtils;
 import com.sui10.commonlib.utils.DensityUtils;
-import com.sui10.commonlib.utils.ToolBarUtils;
+import com.sui10.commonlib.ui.utils.ToolBarUtils;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -446,7 +441,7 @@ public abstract class BaseActivity<T,P extends BasePresenter<T>> extends NetBase
             //判断是否悬浮顶部栏
             if (!isTopBarOverlayout) {
                 RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) mLayoutContaier.getLayoutParams();
-                lp.addRule(RelativeLayout.BELOW, R.id.tool_bar_layout);
+                lp.addRule(RelativeLayout.BELOW, R.id.common_tool_bar);
                 mLayoutContaier.setLayoutParams(lp);
             }
             ToolBarUtils.adjustStatusBar(mToolBar,this);

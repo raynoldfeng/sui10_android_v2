@@ -2,7 +2,7 @@ package com.sui10.commonlib.network.manager;
 
 
 import com.sui10.commonlib.BuildConfig;
-import com.sui10.commonlib.config.BuildHelper;
+import com.sui10.commonlib.base.config.BuildHelper;
 import com.sui10.commonlib.network.interceptor.HostInterceptor;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

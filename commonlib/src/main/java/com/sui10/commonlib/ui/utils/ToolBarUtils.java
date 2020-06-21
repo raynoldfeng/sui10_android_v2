@@ -1,4 +1,4 @@
-package com.sui10.commonlib.utils;
+package com.sui10.commonlib.ui.utils;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -59,5 +59,14 @@ public class ToolBarUtils {
                 view.setLayoutParams(params);
             }
         }
+    }
+
+    public static int getTopbarHeight(Context context){
+        int sdkInt = Build.VERSION.SDK_INT;
+        int height=(int) (context.getResources().getDimension(R.dimen.common_title_bar_height));
+        if (sdkInt >= Build.VERSION_CODES.KITKAT) {
+            return height+StatusBarUtils.getStatusBarHeight2(context);
+        }
+        return height;
     }
 }

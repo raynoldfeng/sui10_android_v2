@@ -9,16 +9,16 @@
         android:id="@+id/ui_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <ViewStub
-            android:id="@+id/ui_topbar_viewstub"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/common_topBarHeight"
-            android:layout="@layout/common_toolbar"/>
         <FrameLayout
             android:id="@+id/ui_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         </FrameLayout>
+        <ViewStub
+            android:id="@+id/ui_topbar_viewstub"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/common_topBarHeight"
+            android:layout="@layout/common_toolbar"/>
     </RelativeLayout>
 
     <!-- 侧边栏 -->

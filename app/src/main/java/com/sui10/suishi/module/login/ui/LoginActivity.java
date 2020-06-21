@@ -11,12 +11,11 @@ import com.sui10.commonlib.log.LogManager;
 import com.sui10.commonlib.thirdparty.login.ThirdLoginCallback;
 import com.sui10.commonlib.thirdparty.login.ThirdLoginType;
 import com.sui10.commonlib.ui.presenter.BasePresenter;
-import com.sui10.commonlib.ui.view.widget.BaseActivity;
+import com.sui10.commonlib.ui.view.base.BaseActivity;
 import com.sui10.suishi.R;
 import com.sui10.suishi.common.net.models.LoginModels;
 import com.sui10.suishi.common.ui.JumpManager;
 import com.sui10.suishi.module.login.thirdparty.SuishiThirdLogin;
-import com.sui10.suishi.common.net.models.AccountModel;
 import com.google.gson.JsonObject;
 
 import butterknife.BindView;

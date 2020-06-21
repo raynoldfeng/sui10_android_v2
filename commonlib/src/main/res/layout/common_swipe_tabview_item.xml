@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dp_45"
+    android:id="@+id/rl_tab_view_item">
+
+    <TextView
+        android:id="@+id/tab_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:textColor="@color/selector_tab_text_color"
+        android:textSize="@dimen/sp_16"
+        android:text=""
+
+        />
+
+    <TextView
+        android:id="@+id/tv_unread_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tab_title"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_unread_red_dot_radius_18dp"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_marginRight="@dimen/dp_m_18"
+        android:minHeight="@dimen/dp_18"
+        android:minWidth="@dimen/dp_18"
+        android:paddingLeft="@dimen/dp_4"
+        android:paddingRight="@dimen/dp_4"
+        android:textColor="@color/color_FF888888"
+        android:textSize="@dimen/sp_12"
+        android:visibility="gone"
+        />
+
+    <View
+        android:id="@+id/view_red_dot"
+        android:layout_width="@dimen/dp_6"
+        android:layout_height="@dimen/dp_6"
+        android:layout_alignTop="@+id/tab_title"
+        android:layout_alignRight="@+id/tab_title"
+        android:layout_marginRight="@dimen/dp_m_4"
+        android:layout_marginTop="@dimen/dp_m_4"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_unread_red_dot"
+        android:visibility="gone"
+        />
+</RelativeLayout>

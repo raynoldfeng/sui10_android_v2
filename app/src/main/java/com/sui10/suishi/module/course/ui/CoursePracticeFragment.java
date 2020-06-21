@@ -1,15 +1,22 @@
 package com.sui10.suishi.module.course.ui;
 
-import com.sui10.commonlib.log.LogManager;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.TextView;
+
 import com.sui10.commonlib.ui.presenter.BasePresenter;
 import com.sui10.commonlib.ui.view.base.BaseFragment;
 import com.sui10.suishi.R;
 
-public class OpenCourseFragment extends BaseFragment {
+import butterknife.BindView;
+
+public class CoursePracticeFragment extends BaseFragment {
+//    @BindView(R.id.empty_tv)
+//    TextView mEmptyTv;
 
     @Override
     protected int getContentViewLayoutID() {
-        return R.layout.fragment_open_course;
+        return R.layout.fragment_course_practice;
     }
 
     @Override
@@ -24,7 +31,6 @@ public class OpenCourseFragment extends BaseFragment {
 
     @Override
     public void initViewsAndEvents() {
-        setTitle(R.string.tab_open_course_text);
     }
 
     @Override
@@ -35,17 +41,5 @@ public class OpenCourseFragment extends BaseFragment {
     @Override
     protected void onNetworkDisConnected() {
 
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        LogManager.d("#####","onDestoryView");
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        LogManager.d("#####","onDestroy");
     }
 }

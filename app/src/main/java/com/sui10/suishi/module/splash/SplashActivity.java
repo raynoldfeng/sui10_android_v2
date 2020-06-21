@@ -17,7 +17,7 @@ import androidx.annotation.Nullable;
 import com.airbnb.lottie.LottieAnimationView;
 import com.sui10.commonlib.network.manager.NetworkManager;
 import com.sui10.commonlib.ui.presenter.BasePresenter;
-import com.sui10.commonlib.ui.view.widget.BaseActivity;
+import com.sui10.commonlib.ui.view.base.BaseActivity;
 import com.sui10.commonlib.utils.SharedPreferenceUtils;
 import com.sui10.suishi.R;
 import com.sui10.suishi.common.constant.SplashConstant;

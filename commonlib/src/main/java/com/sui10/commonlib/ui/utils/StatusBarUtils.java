@@ -1,5 +1,6 @@
 package com.sui10.commonlib.ui.utils;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
@@ -8,11 +9,16 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import androidx.annotation.FloatRange;
 
+import com.sui10.commonlib.R;
 import com.sui10.commonlib.utils.DensityUtils;
 
 import java.lang.reflect.Field;

@@ -1,4 +1,4 @@
-package com.sui10.commonlib.ui.view.widget;
+package com.sui10.commonlib.ui.view.base;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -14,6 +14,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 
 import com.sui10.commonlib.R;
+import com.sui10.commonlib.utils.ResourceUtils;
 
 public class CustomToolBar extends RelativeLayout {
     public static final int[] STATUS_BAR_ATTR = {

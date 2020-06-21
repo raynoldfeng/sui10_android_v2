@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="scroll_content" type="id"/>
+    <item name="scroll_head" type="id"/>
+    <item name="scroll_nav" type="id"/>
+</resources>

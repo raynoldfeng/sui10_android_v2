@@ -1,19 +1,12 @@
 package com.sui10.suishi.module.course.ui;
 
-import android.graphics.Rect;
-import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.sui10.commonlib.log.LogManager;
 import com.sui10.commonlib.ui.presenter.BasePresenter;
-import com.sui10.commonlib.ui.view.widget.BaseFragment;
-import com.sui10.commonlib.utils.DensityUtils;
+import com.sui10.commonlib.ui.view.base.BaseFragment;
 import com.sui10.suishi.R;
 import com.sui10.suishi.common.ui.JumpManager;
 import com.sui10.suishi.common.ui.adapter.BaseAdapter;

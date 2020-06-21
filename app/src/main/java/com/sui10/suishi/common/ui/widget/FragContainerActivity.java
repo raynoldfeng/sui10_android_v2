@@ -9,8 +9,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.sui10.commonlib.ui.presenter.BasePresenter;
-import com.sui10.commonlib.ui.view.widget.BaseActivity;
-import com.sui10.commonlib.ui.view.widget.BaseFragment;
+import com.sui10.commonlib.ui.view.base.BaseActivity;
+import com.sui10.commonlib.ui.view.base.BaseFragment;
 import com.sui10.commonlib.utils.CommonUtils;
 import com.sui10.suishi.R;
 

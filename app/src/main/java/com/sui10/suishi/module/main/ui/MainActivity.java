@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.sui10.commonlib.ui.presenter.BasePresenter;
-import com.sui10.commonlib.ui.view.widget.BaseActivity;
+import com.sui10.commonlib.ui.view.base.BaseActivity;
 import com.sui10.suishi.R;
 import com.sui10.suishi.common.constant.HomeConstant;
 import com.sui10.suishi.common.ui.widget.SuishiNoScrollViewPager;

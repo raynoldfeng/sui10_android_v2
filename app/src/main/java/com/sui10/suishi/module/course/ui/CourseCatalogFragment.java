@@ -1,15 +1,13 @@
 package com.sui10.suishi.module.course.ui;
 
-import com.sui10.commonlib.log.LogManager;
 import com.sui10.commonlib.ui.presenter.BasePresenter;
 import com.sui10.commonlib.ui.view.base.BaseFragment;
 import com.sui10.suishi.R;
 
-public class OpenCourseFragment extends BaseFragment {
-
+public class CourseCatalogFragment extends BaseFragment {
     @Override
     protected int getContentViewLayoutID() {
-        return R.layout.fragment_open_course;
+        return R.layout.fragment_course_catalog;
     }
 
     @Override
@@ -24,7 +22,7 @@ public class OpenCourseFragment extends BaseFragment {
 
     @Override
     public void initViewsAndEvents() {
-        setTitle(R.string.tab_open_course_text);
+
     }
 
     @Override
@@ -35,17 +33,5 @@ public class OpenCourseFragment extends BaseFragment {
     @Override
     protected void onNetworkDisConnected() {
 
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        LogManager.d("#####","onDestoryView");
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        LogManager.d("#####","onDestroy");
     }
 }

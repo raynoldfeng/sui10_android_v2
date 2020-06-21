@@ -1,6 +1,5 @@
-package com.sui10.commonlib.config;
+package com.sui10.commonlib.base.config;
 
-import com.sui10.commonlib.BuildConfig;
 //TODO...待完善，需要添加localbuild等判断
 public class Config<T> {
     public final T value;

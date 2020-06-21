@@ -1,15 +1,7 @@
 package com.sui10.suishi.module.usersystem.ui;
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import com.sui10.commonlib.ui.presenter.BasePresenter;
-import com.sui10.commonlib.ui.view.widget.BaseFragment;
+import com.sui10.commonlib.ui.view.base.BaseFragment;
 import com.sui10.suishi.R;
 
 public class MeFragment extends BaseFragment {

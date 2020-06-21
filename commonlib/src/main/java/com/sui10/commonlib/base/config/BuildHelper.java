@@ -1,4 +1,4 @@
-package com.sui10.commonlib.config;
+package com.sui10.commonlib.base.config;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;

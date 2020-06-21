@@ -22,7 +22,7 @@
         <item name="common_statusBarImmersive">false</item>
         <item name="common_statusBarBackground">@color/transparent</item>
         <item name="common_topBarBackground">@color/transparent</item>
-        <item name="common_topBarLeftDrawable">@drawable/ic_common_back</item>
+        <item name="common_topBarLeftDrawable">@drawable/ic_back_black</item>
         <item name="common_topBarHeight">@dimen/common_title_bar_height</item>
         <item name="common_selectableItemBackground">@drawable/common_clickable_selector</item>
         <item name="android:windowAnimationStyle">@style/Activity_Slide_Animation</item>
@@ -44,6 +44,14 @@
 
     <style name="SuishiAppTheme.BaseUI.NoTitle.IMMersive" parent="SuishiAppTheme">
         <item name="common_statusBarImmersive">true</item>
+    </style>
+
+    <style name="SuishiAppTheme.BaseUI.FloatTop" parent="SuishiAppTheme">
+        <item name="common_topBar">true</item>
+        <item name="common_topBarBackground">@android:color/transparent</item>
+        <item name="common_statusBarBackground">@android:color/transparent</item>
+        <item name="common_statusBarImmersive">true</item>
+        <item name="common_topBarOverlay">true</item>
     </style>
 
     <style name="SuishiAppTheme.BaseUI.Fullscreen" parent="SuishiAppTheme.BaseUI.NoTitle.IMMersive">
@@ -74,5 +82,13 @@
         <item name="android:windowDisablePreview">true</item>
     </style>
 
-  、
+    <declare-styleable name="SwipeTabView">
+        <attr name="stv_default_item" format="integer" />
+        <attr name="bottom_line_visibility" format="boolean"/>
+        <attr name="drag_indicator" format="boolean"/>
+        <attr name="indicator_color" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="LazyViewPager">
+        <attr name="init_lazy_item_offset" format="float" />
+    </declare-styleable>
 </resources>
