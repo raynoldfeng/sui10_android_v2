@@ -52,7 +52,6 @@ public class ProfessionalCourseDetailActivity extends BaseActivity implements Vi
     private ProCourseDetailPagerAdapter mPagerAdapter;
     private FragmentManager mFragmentManager;
     private float mAlpha=1;
-    private Drawable mTopBgDraw;
 
     @BindView(R.id.common_tool_bar)
     CustomToolBar mTopBar;
@@ -80,6 +79,7 @@ public class ProfessionalCourseDetailActivity extends BaseActivity implements Vi
         setContentView(R.layout.activity_professional_course_detail);
         initView();
         initData();
+        StatusBarUtils.darkMode(this);
     }
 
     private void parseIntent(){
@@ -102,11 +102,10 @@ public class ProfessionalCourseDetailActivity extends BaseActivity implements Vi
                 //向上滑动，Y递增
                 mAlpha = 1 - (float) y / maxheight;
                 float alphaReverse=1-mAlpha;
-
-                if(null != mTopBgDraw){
-                    int bgAlpha= (int) (alphaReverse*255);
-                    mTopBgDraw.mutate().setAlpha(bgAlpha);
-                    mTopBar.setBackground(mTopBgDraw);
+                if(mAlpha == 0){
+                    mTopBar.setBackgroundColor(ResourceUtils.getColor(R.color.white));
+                }else {
+                    mTopBar.setBackgroundColor(ResourceUtils.getColor(R.color.transparent));
                 }
                 mTopBar.getTopLeftTextView().setAlpha(alphaReverse);
             }
@@ -204,27 +203,8 @@ public class ProfessionalCourseDetailActivity extends BaseActivity implements Vi
             ImageLoadUtils.setRoundImgUrlWithRefererHeader(mCourseBean.getCover(),mCourseCoverIv,4);
             ImageLoadUtils.setImgSrcUrlWithRefererHeader(mCourseBean.getCover(),mCourseBgIv);
             mTopBar.getTopLeftTextView().setText(mCourseBean.getName());
-            createTopBg();
         }
     }
-
-    private void createTopBg(){
-        Bitmap srcBitmap = mCourseBgIv.getDrawingCache();
-        if(null != srcBitmap){
-            //生成顶部栏的背景
-            int desWidth = DensityUtils.getDisplayWidth(this);
-            int desHeight = ToolBarUtils.getTopbarHeight(this);
-
-            int height = srcBitmap.getWidth() * desHeight / desWidth;
-            Bitmap bgBitmap = Bitmap.createBitmap(srcBitmap.getWidth(),
-                    height, Bitmap.Config.RGB_565);
-            Canvas canvas = new Canvas(bgBitmap);
-            canvas.drawBitmap(srcBitmap, 0, 0, null);
-
-            mTopBgDraw = new BitmapDrawable(bgBitmap);
-        }
-    }
-
 
     @OnClick(R.id.study_now_tv)
     void onStudyNowClicked(){

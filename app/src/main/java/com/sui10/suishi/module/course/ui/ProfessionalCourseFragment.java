@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.sui10.commonlib.ui.presenter.BasePresenter;
+import com.sui10.commonlib.ui.utils.StatusBarUtils;
 import com.sui10.commonlib.ui.view.base.BaseFragment;
 import com.sui10.suishi.R;
 import com.sui10.suishi.common.ui.JumpManager;
@@ -48,6 +49,7 @@ public class ProfessionalCourseFragment extends BaseFragment implements IProfess
 
     @Override
     public void initViewsAndEvents() {
+        StatusBarUtils.darkMode(getActivity());
         mLayoutManager = new LinearLayoutManager(getActivity());
         mProCourseRv.setLayoutManager(mLayoutManager);
         mProCourseAdater = new ProCourseListAdapter();

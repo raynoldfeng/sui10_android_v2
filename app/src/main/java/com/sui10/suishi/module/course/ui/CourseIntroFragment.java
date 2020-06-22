@@ -1,10 +1,19 @@
 package com.sui10.suishi.module.course.ui;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.sui10.commonlib.ui.presenter.BasePresenter;
 import com.sui10.commonlib.ui.view.base.BaseFragment;
 import com.sui10.suishi.R;
 
+import butterknife.BindView;
+
 public class CourseIntroFragment extends BaseFragment {
+    private LinearLayoutManager mLayoutManager;
+
+    @BindView(R.id.course_intro_data_rv)
+    RecyclerView mCourseIntroRv;
 
     @Override
     protected int getContentViewLayoutID() {
@@ -23,7 +32,8 @@ public class CourseIntroFragment extends BaseFragment {
 
     @Override
     public void initViewsAndEvents() {
-
+        mLayoutManager=new LinearLayoutManager(getContext());
+        mCourseIntroRv.setLayoutManager(mLayoutManager);
     }
 
     @Override

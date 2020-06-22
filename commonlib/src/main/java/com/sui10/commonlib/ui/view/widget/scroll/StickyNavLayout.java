@@ -17,6 +17,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.sui10.commonlib.R;
 import com.sui10.commonlib.log.LogManager;
 import com.sui10.commonlib.ui.utils.StatusBarUtils;
+import com.sui10.commonlib.ui.utils.ToolBarUtils;
+import com.sui10.commonlib.ui.view.base.CustomToolBar;
 
 public class StickyNavLayout extends LinearLayout implements NestedScrollingParent {
     private static final String TAG = "StickyNavLayout";
@@ -25,6 +27,7 @@ public class StickyNavLayout extends LinearLayout implements NestedScrollingPare
 
     //private View mTopBar;
     private int mTopbarHeight;
+    private int mStatusbarHeight;
     private View mHeadView;
     private View mNav;
     private View mContentLayout;
@@ -209,8 +212,8 @@ public class StickyNavLayout extends LinearLayout implements NestedScrollingPare
     protected void onFinishInflate() {
         super.onFinishInflate();
         mHeadView = findViewById(R.id.scroll_head);
-        //mTopBar=findViewById(R.id.common_top_bar);
-        mTopbarHeight= StatusBarUtils.getStatusBarHeight(getContext());
+        mStatusbarHeight= StatusBarUtils.getStatusBarHeight(getContext());
+        mTopbarHeight = ToolBarUtils.getTopbarHeight(getContext());
         mNav = findViewById(R.id.scroll_nav);
         mContentLayout =findViewById(R.id.scroll_content);
     }
@@ -222,7 +225,7 @@ public class StickyNavLayout extends LinearLayout implements NestedScrollingPare
         getChildAt(0).measure(widthMeasureSpec, MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED));
 
         ViewGroup.LayoutParams params = mContentLayout.getLayoutParams();
-        params.height = getMeasuredHeight()-mNav.getHeight()- mTopbarHeight;
+        params.height = getMeasuredHeight()-mNav.getHeight()- mTopbarHeight - mStatusbarHeight;
         setMeasuredDimension(getMeasuredWidth(), mHeadView.getMeasuredHeight() + mContentLayout.getMeasuredHeight()+mNav.getHeight());
 
     }

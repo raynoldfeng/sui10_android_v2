@@ -48,7 +48,7 @@
         <activity android:name=".module.main.ui.MainActivity"
             android:configChanges="orientation|screenSize"
             android:launchMode="singleTask"
-            android:theme="@style/SuishiAppTheme.BaseUI.NoTitle" >
+            android:theme="@style/SuishiAppTheme.BaseUI.NoTitle.IMMersive" >
         </activity>
 
 

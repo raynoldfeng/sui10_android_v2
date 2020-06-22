@@ -27,11 +27,11 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/course_cover_iv"
+            android:layout_marginTop="@dimen/dp_87"
             android:layout_width="@dimen/dp_100"
             android:layout_height="@dimen/dp_124"
             android:layout_marginBottom="@dimen/dp_20"
-            android:layout_marginLeft="@dimen/dp_20"
-            android:layout_marginTop="@dimen/dp_87">
+            android:layout_marginLeft="@dimen/dp_20">
         </ImageView>
 
         <TextView

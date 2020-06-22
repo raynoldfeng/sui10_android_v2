@@ -1,8 +1,7 @@
 package com.sui10.suishi.module.course.ui;
 
-import android.view.MotionEvent;
-import android.view.View;
-import android.widget.TextView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.sui10.commonlib.ui.presenter.BasePresenter;
 import com.sui10.commonlib.ui.view.base.BaseFragment;
@@ -11,8 +10,13 @@ import com.sui10.suishi.R;
 import butterknife.BindView;
 
 public class CoursePracticeFragment extends BaseFragment {
+
+    private LinearLayoutManager mLayoutManager;
 //    @BindView(R.id.empty_tv)
 //    TextView mEmptyTv;
+
+    @BindView(R.id.practice_data_rv)
+    RecyclerView mPracticDataRv;
 
     @Override
     protected int getContentViewLayoutID() {
@@ -31,6 +35,8 @@ public class CoursePracticeFragment extends BaseFragment {
 
     @Override
     public void initViewsAndEvents() {
+        mLayoutManager=new LinearLayoutManager(getContext());
+        mPracticDataRv.setLayoutManager(mLayoutManager);
     }
 
     @Override

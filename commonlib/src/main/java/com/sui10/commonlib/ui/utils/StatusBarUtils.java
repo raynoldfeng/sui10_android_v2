@@ -128,9 +128,9 @@ public class StatusBarUtils {
 
         int systemUiVisibility = window.getDecorView().getSystemUiVisibility();
         if (dark) {
-//            systemUiVisibility |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+           systemUiVisibility |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
         } else {
-//            systemUiVisibility &= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+           systemUiVisibility &= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
         }
         window.getDecorView().setSystemUiVisibility(systemUiVisibility);
     }

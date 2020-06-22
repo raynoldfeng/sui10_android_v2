@@ -27,7 +27,7 @@ android {
 
     defaultConfig {
         applicationId "com.sui10.suishi"
-        minSdkVersion 19
+        minSdkVersion 23
         targetSdkVersion 28
         versionCode 0
         versionName version
