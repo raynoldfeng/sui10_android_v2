@@ -100,13 +100,11 @@ public class ProfessionalCourseDetailActivity extends BaseActivity implements Vi
                     y=maxheight;
                 }
                 //向上滑动，Y递增
+                mTopBar.setBackgroundColor(ResourceUtils.getColor(R.color.white));
                 mAlpha = 1 - (float) y / maxheight;
                 float alphaReverse=1-mAlpha;
-                if(mAlpha == 0){
-                    mTopBar.setBackgroundColor(ResourceUtils.getColor(R.color.white));
-                }else {
-                    mTopBar.setBackgroundColor(ResourceUtils.getColor(R.color.transparent));
-                }
+
+                mTopBar.getBackground().setAlpha((int)(255*alphaReverse));
                 mTopBar.getTopLeftTextView().setAlpha(alphaReverse);
             }
 
@@ -200,8 +198,8 @@ public class ProfessionalCourseDetailActivity extends BaseActivity implements Vi
             mCoursePriceTv.setText(String.valueOf(mCourseBean.getPrice()));
             mCourseNameTv.setText(mCourseBean.getName());
             mLearendPeopleCntTv.setText(mCourseBean.getWatch()+"人在学");
-            ImageLoadUtils.setRoundImgUrlWithRefererHeader(mCourseBean.getCover(),mCourseCoverIv,4);
-            ImageLoadUtils.setImgSrcUrlWithRefererHeader(mCourseBean.getCover(),mCourseBgIv);
+            ImageLoadUtils.loadRoundImg(mCourseBean.getCover(),mCourseCoverIv,4);
+            ImageLoadUtils.loadImageWithBlur(mCourseBean.getCover(),30,mCourseBgIv);
             mTopBar.getTopLeftTextView().setText(mCourseBean.getName());
         }
     }

@@ -124,14 +124,14 @@ public class SplashActivity extends BaseActivity {
     @OnClick(R.id.confirm_btn)
     public void onConfirm() {
         mPrivacyPolicySummaryRl.setVisibility(View.GONE);
-        SharedPreferenceUtils.WriteBooleanPreferences(SplashConstant.Policy.PRIVACY_POLICY_SUMMARY,
-                SplashConstant.Policy.PRIVACY_POLICY_SUMMARY_SHOWED,true);
+        SharedPreferenceUtils.WriteBooleanPreferences(SplashConstant.POLICY.PRIVACY_POLICY_SUMMARY,
+                SplashConstant.POLICY.PRIVACY_POLICY_SUMMARY_SHOWED,true);
         startSplashAnimation();
     }
 
     private void tryShowPrivacyPolicySummary() {
-        boolean showed = SharedPreferenceUtils.ReadBooleanPreferences(SplashConstant.Policy.PRIVACY_POLICY_SUMMARY,
-                SplashConstant.Policy.PRIVACY_POLICY_SUMMARY_SHOWED,false);
+        boolean showed = SharedPreferenceUtils.ReadBooleanPreferences(SplashConstant.POLICY.PRIVACY_POLICY_SUMMARY,
+                SplashConstant.POLICY.PRIVACY_POLICY_SUMMARY_SHOWED,false);
 
         if(!showed){
             initPrivacyPolicySummary(false);

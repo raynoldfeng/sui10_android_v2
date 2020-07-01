@@ -21,7 +21,7 @@ public class ProCourseListAdapter extends BaseAdapter<CourseBean, ProCourseListA
         CourseBean courseBean = mDataList.get(i);
         holder.mCourseNameTv.setText(courseBean.getName());
         holder.mLearendPeopleTv.setText("已有"+courseBean.getWatch()+"人学习");
-        ImageLoadUtils.setRoundImgUrlWithRefererHeader(courseBean.getCover(),holder.mCourseCoverIv,8);
+        ImageLoadUtils.loadRoundImg(courseBean.getCover(),holder.mCourseCoverIv,8);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

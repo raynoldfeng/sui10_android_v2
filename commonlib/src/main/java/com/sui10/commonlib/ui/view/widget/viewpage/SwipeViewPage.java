@@ -25,7 +25,7 @@ public class SwipeViewPage extends ViewPagerFixed {
     public SwipeViewPage(Context context, AttributeSet attrs) {
         super(context, attrs);
         isDisallowScroll = false;
-        mTouchSlop = ViewConfigurationCompat.getScaledPagingTouchSlop(ViewConfiguration.get(context));
+        mTouchSlop = ViewConfigurationCompat.getScaledPagingTouchSlop(ViewConfiguration.get(context))*3;
     }
 
     @Override

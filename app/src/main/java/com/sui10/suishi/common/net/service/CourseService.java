@@ -9,6 +9,6 @@ import retrofit2.http.GET;
 
 public interface CourseService {
 
-    @GET(CourseConstant.CourseUrl.ALL_COURSE)
+    @GET(CourseConstant.COURSE_URL.ALL_COURSE)
     Observable<JsonObject> getAllCourse();
 }

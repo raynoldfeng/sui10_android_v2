@@ -15,14 +15,14 @@ public interface LoginService {
      * 账号密码登录
      */
     @FormUrlEncoded
-    @POST(LoginConstant.LoginUrl.loginByAccount)
+    @POST(LoginConstant.LOGIN_URL.loginByAccount)
     Observable<JsonObject> loginByAccount(@Field("account") String account, @Field("password") String password);
 
     /*
      * 手机号、验证码登录
      */
     @FormUrlEncoded
-    @POST(LoginConstant.LoginUrl.loginBySmsCode)
+    @POST(LoginConstant.LOGIN_URL.loginBySmsCode)
     Observable<JsonObject> loginBySmsCode(@Field("nationCode") String nationCode, @Field("phone") String phone, @Field("code") String code);
 
     /*
