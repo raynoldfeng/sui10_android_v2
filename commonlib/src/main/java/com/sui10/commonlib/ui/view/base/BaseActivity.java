@@ -11,6 +11,7 @@ import android.view.ViewStub;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.annotation.CallSuper;
 import androidx.annotation.IdRes;
@@ -227,6 +228,8 @@ public abstract class BaseActivity<T,P extends BasePresenter<T>> extends NetBase
 
     @Override
     public void showNoData(String msg) {
+        findViewById(R.id.common_empty_ll).setVisibility(View.VISIBLE);
+        ((TextView)findViewById(R.id.empty_tv)).setText(msg);
     }
 
     @Override
@@ -236,7 +239,7 @@ public abstract class BaseActivity<T,P extends BasePresenter<T>> extends NetBase
 
     @Override
     public void hideEmpty() {
-
+        findViewById(R.id.common_empty_ll).setVisibility(View.GONE);
     }
 
     @Override

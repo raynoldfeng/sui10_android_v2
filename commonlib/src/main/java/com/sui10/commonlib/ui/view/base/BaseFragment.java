@@ -2,11 +2,13 @@ package com.sui10.commonlib.ui.view.base;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,6 +21,7 @@ import com.sui10.commonlib.ui.presenter.BasePresenter;
 import com.sui10.commonlib.utils.CommonViewUtils;
 import com.sui10.commonlib.ui.utils.ToolBarUtils;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -36,6 +39,9 @@ public abstract class BaseFragment<T, P extends BasePresenter<T>> extends NetBas
     protected P mPresenter;
 
     private CustomToolBar mCustomToolBar;
+    private View mRootView;
+
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -50,6 +56,7 @@ public abstract class BaseFragment<T, P extends BasePresenter<T>> extends NetBas
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        mRootView = view;
         ButterKnife.bind(this, view);
         if (isBindEventBusHere()) {
             EventBusManager.register(this);
@@ -124,6 +131,13 @@ public abstract class BaseFragment<T, P extends BasePresenter<T>> extends NetBas
 
     @Override
     public void showNoData(String msg) {
+      LinearLayout emptyLl =  mRootView.findViewById(R.id.common_empty_ll);
+      if(emptyLl != null){
+          emptyLl.setVisibility(View.VISIBLE);
+          TextView emptyTv = emptyLl.findViewById(R.id.empty_tv);
+          if(emptyTv != null)
+              emptyTv.setText(msg);
+      }
     }
 
     @Override

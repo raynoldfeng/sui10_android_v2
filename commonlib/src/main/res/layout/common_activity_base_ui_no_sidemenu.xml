@@ -14,5 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/common_topBarHeight"
         android:layout="@layout/common_toolbar"/>
-
+    <include
+        layout="@layout/common_empty_layout"
+        android:visibility="gone"></include>
 </RelativeLayout>

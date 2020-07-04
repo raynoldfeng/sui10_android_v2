@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.sui10.commonlib.ui.presenter.BasePresenter;
 import com.sui10.commonlib.ui.view.base.BaseFragment;
+import com.sui10.commonlib.utils.ResourceUtils;
 import com.sui10.suishi.R;
 
 import butterknife.BindView;
@@ -37,6 +38,7 @@ public class CoursePracticeFragment extends BaseFragment {
     public void initViewsAndEvents() {
         mLayoutManager=new LinearLayoutManager(getContext());
         mPracticDataRv.setLayoutManager(mLayoutManager);
+        showNoData(ResourceUtils.getString(R.string.prepareing));
     }
 
     @Override

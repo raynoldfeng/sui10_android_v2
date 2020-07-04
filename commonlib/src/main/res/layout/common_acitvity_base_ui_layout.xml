@@ -30,4 +30,8 @@
         android:layout_gravity="start">
     </FrameLayout>
 
+    <include
+        layout="@layout/common_empty_layout"
+        android:visibility="gone"></include>
+
 </androidx.drawerlayout.widget.DrawerLayout>

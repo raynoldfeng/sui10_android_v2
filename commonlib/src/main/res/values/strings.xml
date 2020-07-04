@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">commonlib</string>
+    <string name="no_data">数据为空哦</string>
 </resources>

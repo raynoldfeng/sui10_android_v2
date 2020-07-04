@@ -3,4 +3,7 @@
     <item name="scroll_content" type="id"/>
     <item name="scroll_head" type="id"/>
     <item name="scroll_nav" type="id"/>
+    <item name="empty_iv" type="id"/>
+    <item name="empty_tv" type="id"/>
+    <item name="common_empty_ll" type="id"/>
 </resources>
