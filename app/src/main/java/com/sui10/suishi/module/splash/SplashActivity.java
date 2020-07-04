@@ -155,6 +155,7 @@ public class SplashActivity extends BaseActivity {
             public void onClick(View widget) {
                 //跳转隐私协议
                // JumpManager.gotoPrivacyWebView(SplashActivity.this);
+                JumpManager.gotoWebViewActivity(SplashActivity.this,SplashConstant.POLICY.PRIVACY_URL,"隐私协议");
             }
 
             @Override
@@ -174,6 +175,7 @@ public class SplashActivity extends BaseActivity {
             public void onClick(View widget) {
                 //跳转隐私协议
                 //JumpManager.gotoServiceWebView(SplashActivity.this);
+                JumpManager.gotoWebViewActivity(SplashActivity.this,SplashConstant.POLICY.SERVICE_URL,"用户服务协议");
             }
 
             @Override

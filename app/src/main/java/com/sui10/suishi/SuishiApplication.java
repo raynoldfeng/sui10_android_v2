@@ -2,6 +2,7 @@ package com.sui10.suishi;
 
 import com.sui10.commonlib.base.CommonApplication;
 import com.sui10.commonlib.log.LogManager;
+import com.sui10.commonlib.webview.WebViewUtils;
 
 import io.reactivex.functions.Consumer;
 import io.reactivex.plugins.RxJavaPlugins;
@@ -12,6 +13,7 @@ public class SuishiApplication  extends CommonApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+        WebViewUtils.initTbs(this);
         catchRxJavaUnCatchException();
     }
 

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.sui10.commonlib.webview.WebViewActivity;
 import com.sui10.suishi.common.ui.widget.FragContainerActivity;
 import com.sui10.suishi.module.course.bean.CourseBean;
 import com.sui10.suishi.module.course.ui.ProfessionalCourseDetailActivity;
@@ -33,6 +34,16 @@ public class JumpManager {
     public static void gotoProCourseDetailActivity(Context context, CourseBean bean){
         Intent intent = new Intent(context, ProfessionalCourseDetailActivity.class);
         intent.putExtra(ProfessionalCourseDetailActivity.COURSE_BEAN_KEY, bean);
+        context.startActivity(intent);
+    }
+
+    public static void gotoWebViewActivity(Context context ,String url ,String title)
+    {
+        Intent intent = new Intent(context, WebViewActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("url", url);
+        bundle.putString("title", title);
+        intent.putExtra("bundle", bundle);
         context.startActivity(intent);
     }
 }

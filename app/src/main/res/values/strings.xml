@@ -24,6 +24,7 @@
     <string name="price_title">软妹币</string>
     <string name="study_now">立即学习</string>
     <string name="prepareing">疯狂制作中，敬请期待</string>
+    <string name="please_buy_first">请先购买，再学习</string>
 
     <!-- 隐私协议-->
     <string name="login_policy">登录即视为同意用户服务协议和隐私政策</string>

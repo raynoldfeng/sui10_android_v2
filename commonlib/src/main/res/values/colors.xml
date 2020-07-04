@@ -26,6 +26,7 @@
     <color name="black_transparency_20_percent">#33000000</color>
     <color name="black_transparency_25_percent">#40000000</color>
     <color name="black_transparency_30_percent">#4c000000</color>
+    <color name="black_transparency_35_percent">#A6000000</color>
     <color name="black_transparency_40_percent">#66000000</color>
     <color name="black_transparency_45_percent">#72000000</color>
     <color name="black_transparency_50_percent">#80000000</color>
@@ -49,4 +50,6 @@
     <color name="color_FFFF4760">#FFFF4760</color>
     <color name="color_FFE6B66E">#FFE6B66E</color>
     <color name="color_FFE3A344">#FFE3A344</color>
+    <color name="color_FF222222">#FF222222</color>
+    <color name="color_FFAAAAAA">#FFAAAAAA</color>
 </resources>

@@ -7,6 +7,7 @@
         android:id="@+id/course_catalog_data_rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dp_58"
         android:splitMotionEvents="false">
     </androidx.recyclerview.widget.RecyclerView>
 

@@ -93,11 +93,13 @@ public class ProfessionalCourseDetailActivity extends BaseActivity implements Vi
             @Override
             public void scrollTo(int x, int y) {
                 int maxheight=mStickyNavLayout.getTopViewHeight();
-                if(y<0){
+                mTopBar.getTopLeftImage().setImageResource(R.drawable.ic_back_white);
+                if(y<=0){
                     y=0;
                 }
-                if(y>maxheight){
+                if(y>=maxheight){
                     y=maxheight;
+                    mTopBar.getTopLeftImage().setImageResource(R.drawable.ic_back_black);
                 }
                 //向上滑动，Y递增
                 mTopBar.setBackgroundColor(ResourceUtils.getColor(R.color.white));
@@ -138,14 +140,15 @@ public class ProfessionalCourseDetailActivity extends BaseActivity implements Vi
     private void initTopBar(){
         mTopBar.getTitleTextView().setVisibility(View.GONE);
         mTopBar.getTopLeftImage().setVisibility(View.VISIBLE);
-        //mTopBar.getTopLeftImage().setImageResource(R.drawable.ic_back_white);
+        mTopBar.getTopLeftImage().setImageResource(R.drawable.ic_back_white);
         mTopBar.getTopLeftTextView().setVisibility(View.VISIBLE);
         mTopBar.getTopLeftTextView().setAlpha(0);
     }
 
-    public static List<FragClassifyEntity> getChannelPageFragClassify() {
+    public List<FragClassifyEntity> getChannelPageFragClassify() {
         List<FragClassifyEntity> list = new ArrayList<>();
         Bundle bundle=new Bundle();
+        bundle.putSerializable(COURSE_BEAN_KEY,mCourseBean);
 
         FragClassifyEntity classifyIntro = new FragClassifyEntity();
         classifyIntro.setId(FRAG_ID_COURSE_INTRO);

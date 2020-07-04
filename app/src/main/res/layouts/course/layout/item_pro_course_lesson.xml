@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_86"
+    android:layout_marginLeft="@dimen/dp_16"
+    android:layout_marginRight="@dimen/dp_16">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/not_free_iv">
+        <TextView
+            android:id="@+id/lesson_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/color_FF222222">
+        </TextView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_below="@+id/lesson_name_tv"
+            >
+            <ImageView
+                android:id="@+id/user_cnt_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_user_cnt"
+                android:layout_centerVertical="true">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/user_cnt_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/color_FFAAAAAA"
+                android:layout_toRightOf="@+id/user_cnt_iv"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:gravity="top"
+                android:layout_centerVertical="true">
+            </TextView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+  <ImageView
+      android:id="@+id/not_free_iv"
+      android:layout_width="@dimen/dp_20"
+      android:layout_height="@dimen/dp_20"
+      android:layout_alignParentRight="true"
+      android:src="@drawable/ic_lesson_lock"
+      android:layout_centerVertical="true">
+  </ImageView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_alignParentBottom="true"
+        android:src="@color/black_transparency_5_percent">
+    </ImageView>
+
+</RelativeLayout>

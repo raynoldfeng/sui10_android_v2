@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.sui10.commonlib.log.LogManager;
 import com.sui10.commonlib.ui.presenter.BasePresenter;
+import com.sui10.suishi.common.constant.NetConstant;
 import com.sui10.suishi.common.net.models.CourseModels;
 import com.sui10.suishi.module.course.bean.CourseBean;
 import com.sui10.suishi.module.course.bean.GetAllCourseRsp;
@@ -24,21 +25,13 @@ public class ProfessionalCoursePresenter extends BasePresenter<IProfessionalCour
         CourseModels.getAllCourse()
             .subscribeOn(Schedulers.newThread())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(new Consumer<JsonObject>() {
+            .subscribe(new Consumer<GetAllCourseRsp>() {
              @Override
-            public void accept(JsonObject jsonObject) throws Exception {
-                 LogManager.d(TAG,"@@@@@@@json Object"+jsonObject.toString());
-                 try {
-                     Gson gson = new Gson();
-                     GetAllCourseRsp rsp = gson.fromJson(jsonObject, GetAllCourseRsp.class);
-                     if(rsp.getCode() == 200){
-                         if(getView() != null){
-                             getView().onProCourseListGetSucess(new ArrayList<CourseBean>(rsp.getCourseBeanList().values()));
-                         }
+            public void accept(GetAllCourseRsp rsp) throws Exception {
+                 if(rsp != null && rsp.getCode() == NetConstant.RSP_CODE.OK){
+                     if(getView() != null){
+                         getView().onProCourseListGetSucess(new ArrayList<CourseBean>(rsp.getCourseBeanList().values()));
                      }
-
-                 }catch (Exception e){
-
                  }
             }
         }, new Consumer<Throwable>() {

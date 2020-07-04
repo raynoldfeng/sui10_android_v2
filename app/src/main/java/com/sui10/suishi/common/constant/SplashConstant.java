@@ -8,7 +8,7 @@ public class SplashConstant {
 
         //隐私协议摘要
         String PRIVACY_POLICY_SUMMARY = "privacy_policya_summary";
-         String PRIVACY_POLICY_SUMMARY_SHOWED = "privacy_policya_summary_showed";
+        String PRIVACY_POLICY_SUMMARY_SHOWED = "privacy_policya_summary_showed";
     }
 
 }
