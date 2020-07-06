@@ -67,7 +67,7 @@
             android:name="com.sui10.commonlib.webview.WebViewActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="@string/app_name"
-            android:theme="@style/SuishiAppTheme.BaseUI.FloatTop"
+            android:theme="@style/SuishiAppTheme.BaseUI"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!-- 微信登陆 -->

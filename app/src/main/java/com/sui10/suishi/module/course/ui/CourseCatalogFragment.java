@@ -7,21 +7,17 @@ import android.view.View;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import com.sui10.commonlib.log.LogManager;
 import com.sui10.commonlib.ui.presenter.BasePresenter;
 import com.sui10.commonlib.ui.utils.ToastUtils;
 import com.sui10.commonlib.ui.view.base.BaseFragment;
 import com.sui10.suishi.R;
-import com.sui10.suishi.common.constant.NetConstant;
+import com.sui10.commonlib.base.constants.NetConstant;
 import com.sui10.suishi.common.net.models.CourseModels;
 import com.sui10.suishi.common.ui.JumpManager;
 import com.sui10.suishi.common.ui.adapter.BaseAdapter;
 import com.sui10.suishi.module.course.adapter.CourseLessonsAdapter;
 import com.sui10.suishi.module.course.bean.CourseBean;
 import com.sui10.suishi.module.course.bean.CourseLessonBean;
-import com.sui10.suishi.module.course.bean.GetAllCourseRsp;
 import com.sui10.suishi.module.course.bean.GetCourseLessonsRsp;
 
 import butterknife.BindView;
@@ -67,8 +63,8 @@ public class CourseCatalogFragment extends BaseFragment {
                 String url = bean.url;
                 if(TextUtils.isEmpty(url)){
                     ToastUtils.showShort(R.string.please_buy_first);
-                }else {
-                    url= url.substring(1,url.length()-1);
+                }else if(url.length() >6){
+                    url= url.substring(2,url.length()-2);
                     JumpManager.gotoWebViewActivity(getContext(),url,bean.name);
                 }
             }

@@ -25,7 +25,7 @@ public class CourseLessonsAdapter extends BaseAdapter<CourseLessonBean,CourseLes
     @Override
     public void onBindViewHolder(CourseLessonsViewHolder holder, int i) {
         CourseLessonBean courseLessonBean = mDataList.get(i);
-        holder.mLessionNameTv.setText(courseLessonBean.name);
+        holder.mLessionNameTv.setText((i+1)+". "+courseLessonBean.name);
         holder.mWatchCntTv.setText(courseLessonBean.watch +"人学习");
         if(TextUtils.isEmpty(courseLessonBean.url))
             holder.mNotFreeIv.setVisibility(View.VISIBLE);

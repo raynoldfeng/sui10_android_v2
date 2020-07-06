@@ -1,4 +1,4 @@
-package com.sui10.suishi.common.constant;
+package com.sui10.commonlib.base.constants;
 
 public class NetConstant {
     public static String REFERER_HEADER_KEY = "Referer";

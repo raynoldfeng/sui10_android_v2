@@ -10,13 +10,12 @@ import com.sui10.commonlib.R;
 import com.sui10.commonlib.base.CommonApplication;
 import com.bumptech.glide.load.model.Headers;
 import com.sui10.commonlib.utils.DensityUtils;
-import com.sui10.suishi.common.constant.NetConstant;
+import com.sui10.commonlib.base.constants.NetConstant;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import jp.wasabeef.glide.transformations.BlurTransformation;
-import jp.wasabeef.glide.transformations.ColorFilterTransformation;
 
 
 public class ImageLoadUtils {

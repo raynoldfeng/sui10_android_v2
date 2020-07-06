@@ -1,16 +1,12 @@
 package com.sui10.suishi.module.course.mvp;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import com.sui10.commonlib.log.LogManager;
 import com.sui10.commonlib.ui.presenter.BasePresenter;
-import com.sui10.suishi.common.constant.NetConstant;
+import com.sui10.commonlib.base.constants.NetConstant;
 import com.sui10.suishi.common.net.models.CourseModels;
 import com.sui10.suishi.module.course.bean.CourseBean;
 import com.sui10.suishi.module.course.bean.GetAllCourseRsp;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
