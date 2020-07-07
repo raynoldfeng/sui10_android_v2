@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/course_intro_data_rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:splitMotionEvents="false">
+        android:splitMotionEvents="false"
+        android:layout_marginBottom="@dimen/dp_58">
     </androidx.recyclerview.widget.RecyclerView>
-</LinearLayout>
+
+    <include
+        layout="@layout/common_empty_layout"
+        android:visibility="gone"></include>
+</RelativeLayout>
