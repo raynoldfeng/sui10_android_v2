@@ -1,24 +1,18 @@
 package com.sui10.suishi.module.course.ui;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.ViewPager;
 
 import com.sui10.commonlib.ui.presenter.BasePresenter;
 import com.sui10.commonlib.ui.utils.StatusBarUtils;
 import com.sui10.commonlib.ui.utils.ToastUtils;
-import com.sui10.commonlib.ui.utils.ToolBarUtils;
 import com.sui10.commonlib.ui.view.base.BaseActivity;
 import com.sui10.commonlib.ui.view.base.CustomToolBar;
 import com.sui10.commonlib.ui.view.widget.scroll.StickyNavLayout;

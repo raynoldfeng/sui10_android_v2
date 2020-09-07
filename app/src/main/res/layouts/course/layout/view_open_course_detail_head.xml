@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_218">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_160"
+        android:background="@drawable/bg_open_course_title">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_50"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:textSize="@dimen/sp_28"
+            android:textColor="@color/white"
+            android:text="@string/tab_open_course_text"
+            android:textStyle="bold">
+        </TextView>
+
+        <ImageView
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_54"
+            android:layout_marginRight="@dimen/dp_20"
+            android:src="@drawable/ic_search"
+            android:scaleType="centerCrop">
+        </ImageView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/today_study_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:background="@drawable/bg_learn_time"
+        android:elevation="@dimen/dp_18">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_59"
+            android:layout_marginTop="@dimen/dp_20"
+            android:textSize="@dimen/sp_12"
+            android:text="@string/today_learn_title"
+            android:textColor="@color/color_FF999999">
+        </TextView>
+
+        <TextView
+            android:id="@+id/today_study_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_49"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_19"
+            android:text="5"
+            android:textColor="@color/color_FF222222"
+            android:textSize="@dimen/sp_30">
+        </TextView>
+
+        <TextView
+            android:id="@+id/daily_all_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/today_study_time"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:layout_toRightOf="@+id/today_study_time"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:textSize="@dimen/sp_19"
+            android:textColor="@color/black"
+            android:text="/10分钟">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_62"
+            android:layout_marginTop="@dimen/dp_20"
+            android:textSize="@dimen/sp_12"
+            android:text="@string/learn_days"
+            android:textColor="@color/color_FF999999">
+        </TextView>
+
+        <TextView
+            android:id="@+id/study_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/days_title"
+            android:layout_marginRight="@dimen/dp_2"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_19"
+            android:text="5"
+            android:textColor="@color/color_FF222222"
+            android:textSize="@dimen/sp_30">
+        </TextView>
+
+        <TextView
+            android:id="@+id/days_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/study_days"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_68"
+            android:textSize="@dimen/sp_19"
+            android:textColor="@color/black"
+            android:text="天">
+        </TextView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

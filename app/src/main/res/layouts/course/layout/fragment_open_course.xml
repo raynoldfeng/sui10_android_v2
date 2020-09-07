@@ -1,16 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.sui10.commonlib.ui.view.widget.scroll.StickyNavLayout
+        android:id="@+id/layout_open_course"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent">
+
+        <com.sui10.commonlib.ui.view.widget.scroll.StickyNavChildView
+            android:id="@+id/layout_sticky_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent">
+
+            <include
+                android:id="@+id/scroll_head"
+                android:layout_height="@dimen/dp_218"
+                android:layout_width="match_parent"
+                layout="@layout/view_open_course_detail_head"/>
+
+            <RelativeLayout
+                android:id="@id/scroll_nav"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:layout_below="@+id/scroll_head">
+
+                <com.sui10.commonlib.ui.view.widget.viewpage.SwipeTabView
+                    android:id="@+id/swipe_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_alignParentLeft="true"
+                    app:bottom_line_visibility="true">
+                </com.sui10.commonlib.ui.view.widget.viewpage.SwipeTabView>
+            </RelativeLayout>
+        </com.sui10.commonlib.ui.view.widget.scroll.StickyNavChildView>
+
+        <com.sui10.commonlib.ui.view.widget.viewpage.SwipeViewPage
+            android:id="@id/scroll_content"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.sui10.commonlib.ui.view.widget.scroll.StickyNavLayout>
+
     <include
         layout="@layout/common_toolbar"></include>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="HOME">
-    </TextView>
-</LinearLayout>
+</RelativeLayout>

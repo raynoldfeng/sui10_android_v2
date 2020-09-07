@@ -26,12 +26,13 @@ import java.lang.reflect.Method;
 import java.util.regex.Pattern;
 
 public class StatusBarUtils {
-    public static int DEFAULT_COLOR = 0;
+    public static int DEFAULT_BLACK_COLOR = 0;
+    public static int DEFAULT_WHITE_COLOR = 1;
     public static float DEFAULT_ALPHA = 0;//Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP ? 0.2f : 0.3f;
     public static final int MIN_API = 19;
 
     public static void immersive(Activity activity) {
-        immersive(activity, DEFAULT_COLOR, DEFAULT_ALPHA);
+        immersive(activity, DEFAULT_BLACK_COLOR, DEFAULT_ALPHA);
     }
 
     public static void immersive(Activity activity, int color, @FloatRange(from = 0.0, to = 1.0) float alpha) {
@@ -43,7 +44,7 @@ public class StatusBarUtils {
     }
 
     public static void immersive(Window window) {
-        immersive(window, DEFAULT_COLOR, DEFAULT_ALPHA);
+        immersive(window, DEFAULT_BLACK_COLOR, DEFAULT_ALPHA);
     }
 
     public static void immersive(Window window, int color) {
@@ -83,23 +84,27 @@ public class StatusBarUtils {
 
     /** 设置状态栏darkMode,字体颜色及icon变黑(目前支持MIUI6以上,Flyme4以上,Android M以上) */
     public static void darkMode(Activity activity) {
-        darkMode(activity.getWindow(), DEFAULT_COLOR, DEFAULT_ALPHA);
+        darkMode(true,activity.getWindow(), DEFAULT_BLACK_COLOR, DEFAULT_ALPHA);
     }
 
     public static void darkMode(Activity activity, int color, @FloatRange(from = 0.0, to = 1.0) float alpha) {
-        darkMode(activity.getWindow(), color, alpha);
+        darkMode(true,activity.getWindow(), color, alpha);
+    }
+    
+    public static void lightMode(Activity activity){
+        darkMode(false,activity.getWindow(),DEFAULT_WHITE_COLOR,DEFAULT_ALPHA);
     }
 
     /** 设置状态栏darkMode,字体颜色及icon变黑(目前支持MIUI6以上,Flyme4以上,Android M以上) */
-    public static void darkMode(Window window, int color, @FloatRange(from = 0.0, to = 1.0) float alpha) {
+    public static void darkMode(boolean dart,Window window, int color, @FloatRange(from = 0.0, to = 1.0) float alpha) {
         if (isFlyme4Later()) {
-            darkModeForFlyme4(window, true);
+            darkModeForFlyme4(window, dart);
             immersive(window,color,alpha);
         } else if (isMIUI6Later()) {
-            darkModeForMIUI6(window, true);
+            darkModeForMIUI6(window, dart);
             immersive(window,color,alpha);
         } else if (Build.VERSION.SDK_INT >= 23) {
-            darkModeForM(window, true);
+            darkModeForM(window, dart);
             immersive(window, color, alpha);
         } else if (Build.VERSION.SDK_INT >= 19) {
             window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
