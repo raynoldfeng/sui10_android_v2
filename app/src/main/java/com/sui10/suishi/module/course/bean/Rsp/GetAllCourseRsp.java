@@ -1,22 +1,23 @@
-package com.sui10.suishi.module.course.bean;
+package com.sui10.suishi.module.course.bean.Rsp;
 
 import com.google.gson.annotations.SerializedName;
+import com.sui10.suishi.module.course.bean.CourseBean;
 
 import java.util.List;
 import java.util.Map;
 
-public class GetCourseLessonsRsp {
+public class GetAllCourseRsp {
     private int code;
     private String message;
     @SerializedName("data")
-    private List<CourseLessonBean> courseLessonsList;
+    private Map<String, CourseBean> courseBeanList;
 
     public int getCode() {
         return code;
     }
 
-    public List<CourseLessonBean> getCourseLessonList() {
-        return courseLessonsList;
+    public Map<String, CourseBean> getCourseBeanList() {
+        return courseBeanList;
     }
 
     public String getMessage() {

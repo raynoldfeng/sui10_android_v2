@@ -29,13 +29,20 @@
                 android:layout_height="@dimen/dp_45"
                 android:layout_below="@+id/scroll_head">
 
-                <com.sui10.commonlib.ui.view.widget.viewpage.SwipeTabView
-                    android:id="@+id/swipe_view"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/tag_list_rv"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/dp_45"
-                    android:layout_alignParentLeft="true"
-                    app:bottom_line_visibility="true">
-                </com.sui10.commonlib.ui.view.widget.viewpage.SwipeTabView>
+                    android:layout_centerVertical="true"
+                    android:layout_height="@dimen/dp_43"
+                    android:layout_marginLeft="@dimen/dp_20">
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/black_transparency_5_percent"
+                    android:layout_alignParentBottom="true">
+                </View>
             </RelativeLayout>
         </com.sui10.commonlib.ui.view.widget.scroll.StickyNavChildView>
 

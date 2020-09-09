@@ -39,6 +39,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.util.List;
 
 import butterknife.ButterKnife;
+import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.disposables.Disposable;
 
 /**
  * 处理
@@ -65,6 +67,7 @@ public abstract class BaseActivity<T,P extends BasePresenter<T>> extends NetBase
     private Fragment mCurrentFragment;
     private boolean mHasFragmentInbackStack = false;
     private boolean mSavedInstanceState = false;
+    private CompositeDisposable mCompositeDisposable;
 
     private static final int[] TOP_BAR_ATTRS = new int[]{
             R.attr.common_topBar,    //是否显示顶部栏
@@ -146,6 +149,10 @@ public abstract class BaseActivity<T,P extends BasePresenter<T>> extends NetBase
             mPresenter.detachView();
         }
         BaseViewManager.getInstance().removeActivity(getCurrentName());
+        if (mCompositeDisposable != null) {
+            mCompositeDisposable.dispose();
+            mCompositeDisposable = null;
+        }
     }
 
     @Override
@@ -679,4 +686,10 @@ public abstract class BaseActivity<T,P extends BasePresenter<T>> extends NetBase
         transaction.commitNowAllowingStateLoss();
     }
 
+    protected final void addDisposable(Disposable disposable) {
+        if (mCompositeDisposable == null) {
+            mCompositeDisposable = new CompositeDisposable();
+        }
+        mCompositeDisposable.add(disposable);
+    }
 }

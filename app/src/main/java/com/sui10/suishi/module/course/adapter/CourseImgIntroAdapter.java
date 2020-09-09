@@ -15,7 +15,6 @@ import com.sui10.suishi.common.utils.ImageLoadUtils;
 
 public class CourseImgIntroAdapter extends BaseAdapter<String,CourseImgIntroAdapter.CourseImgIntroViewHolder> {
 
-
     @Override
     public CourseImgIntroViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_course_img_intro, viewGroup,false);

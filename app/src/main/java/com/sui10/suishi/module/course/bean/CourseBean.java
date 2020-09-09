@@ -20,6 +20,7 @@ public class CourseBean implements Serializable {
     private float price;
     private float discountPrice;
     private List<String> imgIntro;
+    private List<OpenCourseTagsBean> tags;
 
     public String getWatch() {
         return watch;
@@ -141,6 +142,14 @@ public class CourseBean implements Serializable {
 
     public void setUpdateAt(long updateAt) {
         this.updateAt = updateAt;
+    }
+
+    public void setTags(List<OpenCourseTagsBean> tags) {
+        this.tags = tags;
+    }
+
+    public List<OpenCourseTagsBean> getTags() {
+        return tags;
     }
 }
 

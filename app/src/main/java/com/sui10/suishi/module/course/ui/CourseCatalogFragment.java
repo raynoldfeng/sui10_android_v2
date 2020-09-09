@@ -7,6 +7,7 @@ import android.view.View;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.sui10.commonlib.log.LogManager;
 import com.sui10.commonlib.ui.presenter.BasePresenter;
 import com.sui10.commonlib.ui.utils.ToastUtils;
 import com.sui10.commonlib.ui.view.base.BaseFragment;
@@ -18,7 +19,7 @@ import com.sui10.suishi.common.ui.adapter.BaseAdapter;
 import com.sui10.suishi.module.course.adapter.CourseLessonsAdapter;
 import com.sui10.suishi.module.course.bean.CourseBean;
 import com.sui10.suishi.module.course.bean.CourseLessonBean;
-import com.sui10.suishi.module.course.bean.GetCourseLessonsRsp;
+import com.sui10.suishi.module.course.bean.Rsp.GetCourseLessonsRsp;
 
 import butterknife.BindView;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -92,21 +93,24 @@ public class CourseCatalogFragment extends BaseFragment {
     }
 
     private void requestCourseLessons(String courseName){
-        CourseModels.getCourseLessons(courseName).subscribeOn(Schedulers.newThread())
+        addDisposable(CourseModels.getCourseLessons(courseName)
+                .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Consumer<GetCourseLessonsRsp>() {
                     @Override
                     public void accept(GetCourseLessonsRsp rsp) throws Exception {
                         if(rsp != null && rsp.getCode() == NetConstant.RSP_CODE.OK){
                             mCourseLessonsAdapter.setData(rsp.getCourseLessonList());
+                        }else {
+                            ToastUtils.showShort(rsp.getMessage());
                         }
                     }
                 }, new Consumer<Throwable>() {
                     @Override
                     public void accept(Throwable throwable) throws Exception {
-
+                        LogManager.e(TAG,"getCourseLessons exception : "+throwable.getMessage());
                     }
-                });
+                }));
 
     }
 }

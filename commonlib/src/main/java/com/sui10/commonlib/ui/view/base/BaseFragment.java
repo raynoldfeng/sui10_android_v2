@@ -23,6 +23,8 @@ import com.sui10.commonlib.ui.utils.ToolBarUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.disposables.Disposable;
 
 /**
  * 处理
@@ -40,8 +42,7 @@ public abstract class BaseFragment<T, P extends BasePresenter<T>> extends NetBas
 
     private CustomToolBar mCustomToolBar;
     private View mRootView;
-
-
+    private CompositeDisposable mCompositeDisposable;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -90,8 +91,11 @@ public abstract class BaseFragment<T, P extends BasePresenter<T>> extends NetBas
         if (isBindEventBusHere()) {
             EventBusManager.unregister(this);
         }
+        if (mCompositeDisposable != null) {
+            mCompositeDisposable.dispose();
+            mCompositeDisposable = null;
+        }
         super.onDestroy();
-
     }
 
     @Override
@@ -333,6 +337,13 @@ public abstract class BaseFragment<T, P extends BasePresenter<T>> extends NetBas
         if (mCustomToolBar != null) {
             mCustomToolBar.getTopLeftTextView().setVisibility(enabled ? View.VISIBLE : View.GONE);
         }
+    }
+
+    protected final void addDisposable(Disposable disposable) {
+        if (mCompositeDisposable == null) {
+            mCompositeDisposable = new CompositeDisposable();
+        }
+        mCompositeDisposable.add(disposable);
     }
 
 }

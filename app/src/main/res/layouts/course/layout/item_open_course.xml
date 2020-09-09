@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_120">
+
+    <ImageView
+        android:id="@+id/course_cover_iv"
+        android:layout_width="@dimen/dp_88"
+        android:layout_height="@dimen/dp_120"
+        android:layout_marginLeft="@dimen/dp_20">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/course_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/course_cover_iv"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:textColor="@color/color_FF222222"
+        android:textSize="@dimen/sp_17"
+        android:singleLine="false"
+        android:maxLines="2"
+        android:layout_marginRight="@dimen/dp_50"
+        android:text="">
+    </TextView>
+    
+    <ImageView
+        android:id="@+id/course_type_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/course_name_tv"
+        android:layout_below="@+id/course_name_tv"
+        android:layout_marginTop="@dimen/dp_11"
+        android:src="@drawable/ic_course_type_video">
+    </ImageView>
+    
+    <TextView
+        android:id="@+id/course_learning_people_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/color_FF666666"
+        android:layout_toRightOf="@+id/course_type_iv"
+        android:layout_marginLeft="@dimen/dp_6"
+        android:layout_alignTop="@+id/course_type_iv"
+        android:text="">
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/course_tags_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/course_name_tv"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_alignParentBottom="true">
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>
