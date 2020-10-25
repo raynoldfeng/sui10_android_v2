@@ -41,6 +41,14 @@ public class PerTagOpenCourseAdapter extends BaseAdapter<CourseBean,PerTagOpenCo
         if(openCourseTagsBeans != null && !openCourseTagsBeans.isEmpty()){
             holder.mCourseTagsAdapter.setData(openCourseTagsBeans);
         }
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(mItemClickListener != null){
+                    mItemClickListener.onItemClick(holder.itemView,courseBean,i);
+                }
+            }
+        });
     }
 
     @Override

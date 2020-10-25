@@ -10,6 +10,18 @@
         android:layout_marginBottom="@dimen/dp_58">
     </androidx.recyclerview.widget.RecyclerView>
 
+    <TextView
+        android:id="@+id/text_intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_FF666666"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_23"
+        android:layout_marginTop="@dimen/dp_20">
+    </TextView>
+
     <include
         layout="@layout/common_empty_layout"
         android:visibility="gone"></include>

@@ -1,6 +1,8 @@
 package com.sui10.suishi.module.course.bean;
 
-public class OpenCourseTagsBean {
+import java.io.Serializable;
+
+public class OpenCourseTagsBean implements Serializable {
 //    "id": 3,
 //     "name": "情商",
 //     "isDel": 0

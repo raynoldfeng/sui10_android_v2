@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_211"
+        android:background="@color/color_FF666666">
+    </LinearLayout>
+
+    <com.sui10.commonlib.ui.view.widget.viewpage.SwipeTabView
+        android:id="@+id/swipe_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        app:bottom_line_visibility="true">
+    </com.sui10.commonlib.ui.view.widget.viewpage.SwipeTabView>
+
+    <com.sui10.commonlib.ui.view.widget.viewpage.SwipeViewPage
+        android:id="@id/scroll_content"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

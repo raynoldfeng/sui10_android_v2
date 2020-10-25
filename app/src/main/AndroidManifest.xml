@@ -63,6 +63,12 @@
             android:label="">
         </activity>
 
+        <activity android:name=".module.course.ui.OpenCourseDetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/SuishiAppTheme.BaseUI.FloatTop"
+            android:label="">
+        </activity>
+
         <activity
             android:name="com.sui10.commonlib.webview.WebViewActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"

@@ -2,7 +2,9 @@ package com.sui10.suishi.module.course.ui;
 
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,6 +28,9 @@ public class CourseIntroFragment extends BaseFragment {
 
     @BindView(R.id.course_intro_data_rv)
     RecyclerView mCourseIntroRv;
+    @BindView(R.id.text_intro)
+    TextView mTextIntro;
+
 
     @Override
     protected int getContentViewLayoutID() {
@@ -64,9 +69,13 @@ public class CourseIntroFragment extends BaseFragment {
         if(bundle != null){
             mCourseBean = (CourseBean)bundle.getSerializable(ProfessionalCourseDetailActivity.COURSE_BEAN_KEY);
             List<String> imgIntros = mCourseBean.getImgIntro();
+            String textIntro = mCourseBean.getDesc();
             if(imgIntros != null && !imgIntros.isEmpty()){
                 mAdapter.setData(imgIntros);
-            }else {
+            }else if(!TextUtils.isEmpty(textIntro)){
+                mTextIntro.setText(textIntro);
+                mTextIntro.setVisibility(View.VISIBLE);
+            } else {
                 showNoData(ResourceUtils.getString(R.string.prepareing));
             }
         }

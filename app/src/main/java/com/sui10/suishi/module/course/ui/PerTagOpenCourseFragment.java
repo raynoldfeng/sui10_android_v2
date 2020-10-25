@@ -17,7 +17,10 @@ import com.sui10.commonlib.utils.DensityUtils;
 import com.sui10.commonlib.utils.ResourceUtils;
 import com.sui10.suishi.R;
 import com.sui10.suishi.common.net.models.CourseModels;
+import com.sui10.suishi.common.ui.JumpManager;
+import com.sui10.suishi.common.ui.adapter.BaseAdapter;
 import com.sui10.suishi.module.course.adapter.PerTagOpenCourseAdapter;
+import com.sui10.suishi.module.course.bean.CourseBean;
 import com.sui10.suishi.module.course.bean.Rsp.GetOpenCourseByTagRsp;
 
 import butterknife.BindView;
@@ -67,6 +70,12 @@ public class PerTagOpenCourseFragment  extends BaseFragment {
 
         mAdapter = new PerTagOpenCourseAdapter();
         mCourseLessonsRv.setAdapter(mAdapter);
+        mAdapter.setItemClickListener(new BaseAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, Object item, int position) {
+                JumpManager.gotoOpenCourseDetailActivity(getActivity(),(CourseBean)item);
+            }
+        });
         initData();
     }
 
