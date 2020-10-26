@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="common_bg_divider">#FFF5F5F5</color>
+    <color name="common_bg_divider">#FFF2F4F7</color>
     <color name="common_bg_dark">#FFF5F5F5</color>
     <color name="common_text_color">#FF666666</color>
     <color name="common_text_color_pressed">#FFEBB25D</color>
-    <color name="common_text_color_dark_grey">#FF1E1E1E</color>
     <color name="common_text_color_grey">#5a5a5a</color>
-    <color name="common_text_color_light_grey">#FFB4B4B4</color>
-    <color name="common_btn_enable">#FF808069</color>
+    <color name="common_btn_enable">#D8D9DC</color>
     <color name="common_btn_bg">#FFEBB25D</color>
     <color name="common_btn_pressed">#FFE88565</color>
     <color name="colorPrimary">#FFFFFFFF</color>
@@ -26,4 +24,7 @@
 
     <color name="color_FF999999">#FF999999</color>
     <color name="color_FF222222">#FF222222</color>
+    <color name="color_FF222426">#FF222426</color>
+    <color name="color_FFAAAAAA">#FFAAAAAA</color>
+
 </resources>
