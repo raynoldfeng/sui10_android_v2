@@ -44,4 +44,12 @@
     <string name="today_learn_title">今日学习</string>
     <string name="learn_days">学习天数</string>
 
+    <!-- 个人中心-->
+    <string name="not_set">未设置</string>
+    <string name="login_immeidate">立即登录</string>
+    <string name="not_logined">您还未登录</string>
+    <string name="main_menu_user_info">个人资料</string>
+    <string name="main_menu_help">帮助反馈</string>
+    <string name="main_menu_my_course">已购课程</string>
+    <string name="main_menu_setting">设置</string>
 </resources>

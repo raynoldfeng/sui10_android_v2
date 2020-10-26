@@ -2,7 +2,7 @@
 <resources>
     <color name="common_bg_divider">#FFF5F5F5</color>
     <color name="common_bg_dark">#FFF5F5F5</color>
-    <color name="common_text_color">#FFFFFFFF</color>
+    <color name="common_text_color">#FF666666</color>
     <color name="common_text_color_pressed">#FFEBB25D</color>
     <color name="common_text_color_dark_grey">#FF1E1E1E</color>
     <color name="common_text_color_grey">#5a5a5a</color>
