@@ -3,6 +3,8 @@ package com.sui10.suishi.common.net.service;
 import com.sui10.suishi.common.constant.LoginConstant;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
+import com.sui10.suishi.common.ui.rsp.CommonRsp;
+import com.sui10.suishi.module.login.bean.rsp.SmsLoginRsp;
 
 import io.reactivex.Observable;
 import retrofit2.http.Field;
@@ -23,7 +25,17 @@ public interface LoginService {
      */
     @FormUrlEncoded
     @POST(LoginConstant.LOGIN_URL.loginBySmsCode)
-    Observable<JsonObject> loginBySmsCode(@Field("nationCode") String nationCode, @Field("phone") String phone, @Field("code") String code);
+    Observable<SmsLoginRsp> loginBySmsCode(@Field("nationCode") String nationCode, @Field("phone") String phone, @Field("code") String code);
+
+    /*
+     * 获取验证码
+     * @param nationCode  国家代码"86";
+     * @param code 图形码
+     */
+    @FormUrlEncoded
+    @POST(LoginConstant.LOGIN_URL.getSmsCode)
+    Observable<CommonRsp> getSmsCode(@Field("nationCode") String nationCode, @Field("phone") String phone, @Field("code") String code, @Field("rand") String rand);
+
 
     /*
      * 自动登录

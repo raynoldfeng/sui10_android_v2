@@ -4,6 +4,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.load.model.GlideUrl;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
+import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
 import com.sui10.commonlib.R;
@@ -50,6 +51,7 @@ public class ImageLoadUtils {
                     .error(R.drawable.body_def_head)
                     .apply(options)
                     .into(imageView);
+
         }
     }
 
@@ -82,6 +84,15 @@ public class ImageLoadUtils {
             headers.put(NetConstant.REFERER_HEADER_KEY,NetConstant.REFERER_HEADER_VALUE);
             loadImgWithHeader(url,headers,imageView,new RequestOptions().transforms(new CenterCrop(),
                     new RoundedCorners(DensityUtils.dip2px(CommonApplication.getContext(), roundingRadius))));
+        }
+    }
+
+    public static void loadCircleImg(String url, ImageView imageView){
+        if(url!= null && !url.isEmpty() && imageView != null)
+        {
+            Map<String,String> headers = new HashMap<>();
+            headers.put(NetConstant.REFERER_HEADER_KEY,NetConstant.REFERER_HEADER_VALUE);
+            loadImgWithHeader(url,headers,imageView,new RequestOptions().transforms(new CircleCrop()));
         }
     }
 

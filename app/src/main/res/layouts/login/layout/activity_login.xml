@@ -70,7 +70,7 @@
                 android:textColorHint="@color/color_FFAAAAAA"
                 android:imeOptions="actionNext"
                 android:inputType="number"
-                android:maxLength="20"
+                android:maxLength="11"
                 android:textSize="@dimen/sp_16" />
 
             <View
@@ -81,6 +81,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/verification_code_rl"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_44"
             android:layout_marginStart="@dimen/dp_40"
@@ -91,7 +92,7 @@
             android:visibility="gone">
 
             <EditText
-                android:id="@+id/et_password"
+                android:id="@+id/verification_code_et"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
@@ -105,6 +106,7 @@
                 android:textSize="@dimen/sp_16" />
 
             <TextView
+                android:id="@+id/reget_verfication_code_tv"
                 android:layout_width="@dimen/dp_88"
                 android:layout_height="@dimen/dp_30"
                 android:layout_centerVertical="true"
@@ -113,7 +115,7 @@
                 android:gravity="center"
                 android:textSize="@dimen/sp_12"
                 android:textColor="@color/color_FF222426"
-                android:background="@drawable/bg_btn_white_with_stroke">
+                android:background="@drawable/bg_btn_white_with_f2f4f7_stroke">
             </TextView>
 
             <View
@@ -124,10 +126,21 @@
         </RelativeLayout>
 
         <TextView
+            android:id="@+id/hint_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:textSize="@dimen/sp_12"
+            android:layout_marginTop="@dimen/dp_8"
+            android:textColor="@color/color_FFFF3333"
+            android:visibility="invisible">
+        </TextView>
+
+        <TextView
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_40"
-            android:layout_marginTop="@dimen/dp_31"
+            android:layout_height="@dimen/dp_48"
+            android:layout_marginTop="@dimen/dp_10"
             android:layout_marginLeft="@dimen/dp_40"
             android:layout_marginRight="@dimen/dp_40"
             android:gravity="center"

@@ -77,4 +77,10 @@ public class FragContainerActivity extends BaseActivity {
     protected void onNetworkConnected(int type) {
 
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

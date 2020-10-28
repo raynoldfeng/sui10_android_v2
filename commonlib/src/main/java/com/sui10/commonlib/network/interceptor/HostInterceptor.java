@@ -2,6 +2,7 @@ package com.sui10.commonlib.network.interceptor;
 
 import com.sui10.commonlib.base.config.TestEnvironment;
 import com.sui10.commonlib.base.constants.HostConstant;
+import com.sui10.commonlib.log.LogManager;
 
 import java.io.IOException;
 import java.lang.annotation.Annotation;
@@ -15,7 +16,7 @@ import okhttp3.Response;
 
 public class HostInterceptor implements Interceptor {
     private static HashMap<String, String> hostMap;
-    private static HashMap<String, String> schemeMap;
+    private static HashMap<Integer, String> schemeMap;
 
     public HostInterceptor() {
         initHostMap();
@@ -41,7 +42,7 @@ public class HostInterceptor implements Interceptor {
                             HttpUrl testUrl = HttpUrl.parse(test);
                             if (prodUrl != null && testUrl != null) {
                                 hostMap.put(prodUrl.host(), testUrl.host());
-                                schemeMap.put(testUrl.host(), testUrl.scheme());
+                                schemeMap.put(prodUrl.port(), prodUrl.scheme());
                             }
                         }
                     }
@@ -55,12 +56,12 @@ public class HostInterceptor implements Interceptor {
     @Override
     public Response intercept(Chain chain) throws IOException {
         Request.Builder requestBuilder = chain.request().newBuilder();
-        HttpUrl url = chain.request().url();
-        String oldHost = url.host();
-        if (hostMap.containsKey(oldHost)) {
-            HttpUrl.Builder urlBuilder = url.newBuilder();
-            String newHost = hostMap.get(oldHost);
-            urlBuilder.host(newHost).scheme(schemeMap.get(newHost));
+        HttpUrl prodUrl = chain.request().url();
+        String proHost = prodUrl.host();
+        if (hostMap.containsKey(proHost)) {
+            HttpUrl.Builder urlBuilder = prodUrl.newBuilder();
+            String testHost = hostMap.get(proHost);
+            urlBuilder.host(testHost).scheme(schemeMap.get(prodUrl.port()));
             requestBuilder.url(urlBuilder.build());
             return chain.proceed(requestBuilder.build());
         }
